@@ -1,0 +1,36 @@
+$color-primary: #7645d9;
+$color-secondary: #1fc7d4;
+$color-tertiary: #ed4b9e;
+$colors: (
+  "primary": $color-primary,
+  "secondary": $color-secondary,
+  "tertiary": $color-tertiary,
+);
+
+$text-color-primary: #280d5f;
+$text-color-secondary: #a8a0c7;
+$text-colors: (
+  "primary": $text-color-primary,
+  "secondary": $text-color-secondary,
+);
+
+$sizes: (
+  "xs": 12px,
+  "sm": 16px,
+  "md": 20px,
+  "lg": 24px,
+  "xl": 40px,
+  "xxl": 64px,
+);
+
+$weights: (
+  "100": 100,
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+  "900": 900,
+);

@@ -1,0 +1,48 @@
+@use "../var.scss" as var;
+@use "sass:map";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.text {
+  font-size: map.get(var.$sizes, "sm");
+  font-family: Kanit;
+  font-weight: map.get(var.$weights, "light");
+  color: var.$text-color-primary;
+
+  @each $name, $color in var.$text-colors {
+    &-#{$name} {
+      @extend .text;
+      color: $color;
+    }
+  }
+}
+
+.title {
+  font-size: map.get(var.$sizes, "xl");
+  font-family: Kanit;
+  font-weight: map.get(var.$weights, "bold");
+  color: var.$text-color-primary;
+
+  @each $name, $color in var.$colors {
+    &-#{$name} {
+      @extend .title;
+      color: $color;
+    }
+  }
+}
+
+.f {
+  &s {
+    @each $name, $size in var.$sizes {
+      &-#{$name} {
+        font-size: $size;
+      }
+    }
+  }
+  &w {
+    @each $name, $weight in var.$weights {
+      &-#{$name} {
+        font-weight: $weight;
+      }
+    }
+  }
+}
