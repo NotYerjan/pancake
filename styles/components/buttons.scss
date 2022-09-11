@@ -1,0 +1,43 @@
+@use "../var.scss" as var;
+@use "sass:color";
+.btn {
+  height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  cursor: pointer;
+  font-family: Kanit;
+  font-size: 16px;
+  font-weight: 600;
+
+  &:hover {
+    opacity: 60%;
+  }
+
+  &-primary {
+    @extend .btn;
+    color: white;
+    background-color: var.$color-secondary;
+    box-shadow: 0 1px color.adjust(var.$color-secondary, $lightness: -20%);
+  }
+  &-small {
+    @extend .btn-primary;
+    height: 32px;
+    padding: 0 16px;
+  }
+  &-outline {
+    @extend .btn;
+    color: var.$color-secondary;
+    border: 2px solid var.$color-secondary;
+  }
+  &-secondary {
+    @extend .btn;
+    padding: 0 10px;
+    color: var.$color-secondary;
+    &:hover {
+      opacity: 100%;
+      text-decoration-line: underline;
+    }
+  }
+}
