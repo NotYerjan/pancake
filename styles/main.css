@@ -193,6 +193,9 @@ nav .nav-right .lang:hover .lang-list {
   nav .nav-right .pancake-coin:hover img {
     transform: scale(1.2);
   }
+  nav .nav-right button::after {
+    content: " Wallet";
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
