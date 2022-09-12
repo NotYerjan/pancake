@@ -8,7 +8,7 @@
 html,
 body {
   background-color: white;
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   width: 100vw;
   max-width: 100%;
 }
@@ -33,6 +33,7 @@ section {
   font-family: Kanit;
   font-size: 16px;
   font-weight: 600;
+  transition: 0.2s linear;
 }
 .btn:hover, .btn-secondary:hover, .btn-outline:hover, .btn-primary:hover, .btn-small:hover {
   opacity: 60%;
@@ -61,19 +62,19 @@ section {
 
 .text, .text-secondary, .text-primary {
   font-size: 16px;
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   color: #280d5f;
 }
 .text-primary {
   color: #280d5f;
 }
 .text-secondary {
-  color: #a8a0c7;
+  color: #7a6eaa;
 }
 
 .title, .title-tertiary, .title-secondary, .title-primary {
   font-size: 40px;
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   color: #280d5f;
 }
 .title-primary {
@@ -130,6 +131,68 @@ section {
 }
 .fw-900 {
   font-weight: 900;
+}
+
+nav {
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid #7a6eaa;
+  padding: 0 16px;
+  display: flex;
+}
+nav .nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+nav .nav-right .btn {
+  height: 24px;
+  padding: 0;
+  margin: 10px;
+}
+nav .nav-right .pancake-coin {
+  display: none;
+}
+nav .nav-right .lang {
+  position: relative;
+}
+nav .nav-right .lang .lang-list {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  right: -75px;
+  width: 200px;
+  height: 400px;
+  padding: 16px;
+  overflow-y: scroll;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+nav .nav-right .lang .lang-list .btn {
+  margin: 5px 0;
+  color: #280d5f;
+}
+nav .nav-right .lang:hover .lang-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 852px) {
+  nav .nav-right .pancake-coin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  nav .nav-right .pancake-coin img {
+    transition: 0.2s linear;
+  }
+  nav .nav-right .pancake-coin:hover {
+    opacity: 100;
+  }
+  nav .nav-right .pancake-coin:hover img {
+    transform: scale(1.2);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
