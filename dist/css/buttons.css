@@ -1,0 +1,37 @@
+.btn, .btn-secondary, .btn-outline, .btn-primary, .btn-small {
+  height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 16px;
+  background: none;
+  cursor: pointer;
+  font-family: Kanit;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.2s linear;
+}
+.btn:hover, .btn-secondary:hover, .btn-outline:hover, .btn-primary:hover, .btn-small:hover {
+  opacity: 60%;
+}
+.btn-primary, .btn-small {
+  color: white;
+  background-color: #1fc7d4;
+  box-shadow: 0 1px #12737b;
+}
+.btn-small {
+  height: 32px;
+  padding: 0 16px;
+}
+.btn-outline {
+  color: #1fc7d4;
+  border: 2px solid #1fc7d4;
+}
+.btn-secondary {
+  padding: 0 10px;
+  color: #1fc7d4;
+}
+.btn-secondary:hover {
+  opacity: 100%;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}/*# sourceMappingURL=buttons.css.map */
