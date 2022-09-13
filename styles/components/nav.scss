@@ -1,11 +1,154 @@
 @use "../var.scss" as var;
 @use "sass:map";
+
+@keyframes blink {
+  3%,
+  100% {
+    opacity: 0;
+  }
+  5%,
+  100% {
+    opacity: 1;
+  }
+}
+
 nav {
   height: 56px;
   width: 100%;
   border-bottom: 1px solid var.$text-color-secondary;
   padding: 0 16px;
   display: flex;
+
+  .logo {
+    cursor: pointer;
+
+    &:hover .eye {
+      animation: blink 4s;
+    }
+    .mobile {
+      width: 32px;
+      margin: auto 0;
+    }
+    .desktop {
+      display: none;
+      margin: auto 0;
+    }
+  }
+
+  .nav-left {
+    margin: auto 0;
+
+    .left-nav {
+      display: none;
+    }
+
+    .flex-menu-sub:hover {
+      background-color: #f6f6f6;
+    }
+    .child-flex {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .svg-color {
+      text-align: center;
+      fill: #280d5f;
+      //margin-right: 10em;
+    }
+    .container-first-child {
+      display: flex;
+      align-items: center;
+    }
+    .menu-sub {
+      //margin-top: 0.1em;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 24px;
+      border: 1px solid #e7e3eb;
+      width: 80%;
+      display: none;
+    }
+    .radius {
+      height: 48px;
+      margin-top: 4px;
+      padding: 12px 16px;
+    }
+    .radius:hover {
+      background-color: #f6f6f6;
+      border-radius: 15px;
+    }
+    .border {
+      border-top: 3px solid #e7e3eb;
+      border-bottom: 3px solid #e7e3eb;
+    }
+
+    .flex-menu-sub:hover {
+      background-color: #f6f6f6;
+    }
+    .child-flex {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+    .svg-color {
+      text-align: center;
+      fill: #280d5f;
+      //margin-right: 10em;
+    }
+    .container-first-child {
+      display: flex;
+      align-items: center;
+    }
+    .menu-sub {
+      //margin-top: 0.1em;
+      position: absolute;
+      background-color: #fff;
+      border-radius: 24px;
+      border: 1px solid #e7e3eb;
+      width: 80%;
+      display: none;
+      overflow: hidden;
+      ul {
+        display: block;
+      }
+    }
+    .radius:hover {
+      background-color: #f6f6f6;
+      border-radius: 15px;
+    }
+    .border {
+      border-top: 3px solid #e7e3eb;
+      border-bottom: 3px solid #e7e3eb;
+    }
+    //nav
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: relative;
+      display: flex;
+      a {
+        display: block;
+        text-decoration: none;
+        padding: 1em;
+        color: #7a6eaa;
+      }
+    }
+    li:hover .menu-sub {
+      display: block;
+      background-color: #fff;
+    }
+    .menu-sub li {
+      display: block;
+    }
+    a:hover {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+  }
 
   .nav-right {
     margin-left: auto;
@@ -49,6 +192,16 @@ nav {
 }
 
 @media screen and (min-width: map.get(var.$screen, "sm")) {
+  nav {
+    .nav-left {
+      .left-nav {
+        display: block;
+      }
+      .menu-sub-second {
+        display: none;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: map.get(var.$screen, "md")) {
@@ -77,118 +230,16 @@ nav {
     }
   }
 }
-//STart nav left
 
-//logo
-
-@keyframes blink {
-  3%,
-  100% {
-    opacity: 0;
-  }
-  5%,
-  100% {
-    opacity: 1;
-  }
-}
-.eye {
-  cursor: pointer;
-  animation: blink 4s infinite;
-}
-.desktop {
-  margin-top: 0.2em;
-  cursor: pointer;
-}
-.mobile {
-  cursor: pointer;
-}
 @media screen and (min-width: map.get(var.$screen, "lg")) {
-  .mobile {
-    display: none;
+  nav {
+    .logo {
+      .mobile {
+        display: none;
+      }
+      .desktop {
+        display: block;
+      }
+    }
   }
 }
-@media screen and (max-width: map.get(var.$screen, "lg")) {
-  .desktop {
-    display: none;
-  }
-}
-
-//finish logo
-//flex-left side
-.flex-menu-sub:hover {
-  background-color: #f6f6f6;
-}
-.child-flex {
-  width: 90%;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.svg-color {
-  text-align: center;
-  fill: #280d5f;
-  //margin-right: 10em;
-}
-.container-first-child {
-  display: flex;
-  align-items: center;
-}
-.menu-sub {
-  //margin-top: 0.1em;
-  position: absolute;
-  background-color: #fff;
-  border-radius: 24px;
-  border: 1px solid #e7e3eb;
-  width: 80%;
-
-  display: none;
-}
-.radius:hover {
-  background-color: #f6f6f6;
-  border-radius: 15px;
-}
-.border {
-  border-top: 3px solid #e7e3eb;
-  border-bottom: 3px solid #e7e3eb;
-}
-//nav
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
-  li {
-    display: inline-block;
-  }
-  a {
-    display: block;
-    text-decoration: none;
-    padding: 1em;
-    color: #7a6eaa;
-  }
-}
-nav li:hover .menu-sub {
-  display: block;
-  background-color: #fff;
-}
-.menu-sub li {
-  display: block;
-}
-nav a:hover {
-  background-color: #f6f6f6;
-  width: 100%;
-}
-@media screen and (max-width: map.get(var.$screen, "sm")) {
-  .left-nav {
-    display: none;
-  }
-  .menu-sub-second {
-    display: block;
-  }
-  .mobile {
-    margin-top: 0.5em;
-  }
-}
-
-//Finish start left
