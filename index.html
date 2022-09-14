@@ -3,12 +3,90 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./public/styles/main.css" />
     <title>PancakeSwap | Home</title>
   </head>
   <body>
+    <div class="footbar">
+      <nav>
+        <div class="nav-left">
+          <ul class="footbar-buttons">
+            <li>
+              <a href="" class="radius">
+                <img src="./public/images/svg/footbar-trade.svg" alt="trade">
+                <p>Trade</p>
+              </a>
+            </li>
+            <li>
+              <a href="" class="radius">
+                <img src="./public/images/svg/footbar-earn.svg" alt="earn">
+                <p>Earn</p>
+              </a>
+              <div class="menu-sub">
+                <ul>
+                  <li><a href="">Farms</a></li>
+                  <li><a href="">Pools</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="" class="radius">
+                <img src="./public/images/svg/footbar-win.svg" alt="win">
+                <p>Win</p>
+              </a>
+              <div class="menu-sub">
+                <ul>
+                  <li><a href="">Trading Competition</a></li>
+                  <li><a href="">Prediction (BETA)</a></li>
+                  <li><a href="">Lottery</a></li>
+                  <li><a href="">Pottery (BETA)</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="" class="radius">
+                <img src="./public/images/svg/footbar-nft.svg" alt="nft">
+                <p>NFT</p>
+              </a>
+              <div class="menu-sub">
+                <ul>
+                  <li><a href="">Overview</a></li>
+                  <li><a href="">Collections</a></li>
+                  <li><a href="">Activity</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="" class="radius">
+                <img src="./public/images/svg/footbar-etc.svg" alt="etc">
+              </a>
+              <div class="menu-sub">
+                <ul>
+                  <li><a href="">Info</a></li>
+                  <li><a href="">IFO</a></li>
+                  <li><a href="">Voting</a></li>
+                  <li class="border"><a href="">Leaderboard</a></li>
+                  <div class="flex-menu-sub">
+                    <div class="child-flex">
+                      <li><a href="">Blog</a></li>
+                      <svg viewBox="0 0 24 24" color="text" width="20px" xmlns="http://www.w3.org/2000/svg" class="svg-color"><path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path></svg>
+                    </div>
+                  </div>
+                  <div class="flex-menu-sub">
+                    <div class="child-flex">
+                      <li><a href="">Docs</a></li>
+                      <svg viewBox="0 0 24 24" color="text" width="20px" xmlns="http://www.w3.org/2000/svg" class="svg-color"><path d="M16.3 8.09014C15.91 8.48014 15.91 9.10014 16.3 9.49014L18.2 11.3901H9C8.45 11.3901 8 11.8401 8 12.3901C8 12.9401 8.45 13.3901 9 13.3901H18.2L16.3 15.2901C15.91 15.6801 15.91 16.3001 16.3 16.6901C16.69 17.0801 17.31 17.0801 17.7 16.6901L21.29 13.1001C21.68 12.7101 21.68 12.0801 21.29 11.6901L17.7 8.09014C17.31 7.70014 16.69 7.70014 16.3 8.09014ZM4 19.3901H11C11.55 19.3901 12 19.8401 12 20.3901C12 20.9401 11.55 21.3901 11 21.3901H4C2.9 21.3901 2 20.4901 2 19.3901V5.39014C2 4.29014 2.9 3.39014 4 3.39014H11C11.55 3.39014 12 3.84014 12 4.39014C12 4.94014 11.55 5.39014 11 5.39014H4V19.3901Z"></path></svg>
+                    </div>
+                  </div> 
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <nav>
-       <div class="nav-left">
+      <div class="nav-left">
         <div class="container-first-child">
           <div class="logo">
             <div class="mobile">
@@ -124,7 +202,6 @@
                 <li><a href="">Overview</a></li>
                 <li><a href="">Collections</a></li>
                 <li><a href="">Activity</a></li>
-               
               </ul>
           </li>
           <li><a href="" class="radius">⋯</a>
@@ -158,14 +235,14 @@
         <a class="btn pancake-coin">
           <img
             height="28"
-            src="./public/svg/pancake-coin.svg"
+            src="./public/images/svg/pancake-coin.svg"
             alt="PancakeSwap coin"
           />
           <span class="text-secondary">$4.536</span>
         </a>
         <span class="lang">
           <div class="btn lang-btn">
-            <img height="24" src="./public/svg/languages.svg" alt="languages" />
+            <img height="24" src="./public/images/svg/languages.svg" alt="languages" />
           </div>
           <div class="lang-list">
             <a class="btn text-secondary">العربية</a>
@@ -199,13 +276,13 @@
           </div>
         </span>
         <div class="btn set-btn">
-          <img height="24" src="./public/svg/settings.svg" alt="settings" />
+          <img height="24" src="./public/images/svg/settings.svg" alt="settings" />
         </div>
         <button class="btn-small">Connect</button>
       </div>
     </nav>
     <div class="section-1">
-      <section class="title-secondary fs-lg fw-500">SECTION 1 is here</section>
+      <section class="title-secondary fs-lg fw-500"><button class="btn-primary">I am a button</button></section>
     </div>
     <div class="section-2">
       <section class="title-secondary fs-lg fw-500">SECTION 2 is here</section>
