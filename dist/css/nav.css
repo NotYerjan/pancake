@@ -1,0 +1,186 @@
+nav {
+  height: 56px;
+  width: 100%;
+  border-bottom: 1px solid #7a6eaa;
+  padding: 0 16px;
+  display: flex;
+}
+nav .nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+nav .nav-right .btn {
+  height: 24px;
+  padding: 0;
+  margin: 10px;
+}
+nav .nav-right .pancake-coin {
+  display: none;
+}
+nav .nav-right .lang {
+  position: relative;
+}
+nav .nav-right .lang .lang-list {
+  background-color: #fff;
+  display: none;
+  position: absolute;
+  right: -75px;
+  width: 200px;
+  height: 400px;
+  padding: 16px;
+  overflow-y: scroll;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+nav .nav-right .lang .lang-list .btn {
+  margin: 5px 0;
+  color: #280d5f;
+}
+nav .nav-right .lang:hover .lang-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 852px) {
+  nav .nav-right .pancake-coin {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  nav .nav-right .pancake-coin img {
+    transition: 0.2s linear;
+  }
+  nav .nav-right .pancake-coin:hover {
+    opacity: 100;
+  }
+  nav .nav-right .pancake-coin:hover img {
+    transform: scale(1.2);
+  }
+  nav .nav-right button::after {
+    content: " Wallet";
+  }
+}
+@-webkit-keyframes blink {
+  3%, 100% {
+    opacity: 0;
+  }
+  5%, 100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  3%, 100% {
+    opacity: 0;
+  }
+  5%, 100% {
+    opacity: 1;
+  }
+}
+.eye {
+  cursor: pointer;
+  -webkit-animation: blink 4s infinite;
+          animation: blink 4s infinite;
+}
+
+.desktop {
+  margin-top: 0.2em;
+  cursor: pointer;
+}
+
+.mobile {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 968px) {
+  .mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 968px) {
+  .desktop {
+    display: none;
+  }
+}
+.flex-menu-sub:hover {
+  background-color: #f6f6f6;
+}
+
+.child-flex {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.svg-color {
+  text-align: center;
+  fill: #280d5f;
+}
+
+.container-first-child {
+  display: flex;
+  align-items: center;
+}
+
+.menu-sub {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 24px;
+  border: 1px solid #e7e3eb;
+  width: 80%;
+  display: none;
+}
+
+.radius:hover {
+  background-color: #f6f6f6;
+  border-radius: 15px;
+}
+
+.border {
+  border-top: 3px solid #e7e3eb;
+  border-bottom: 3px solid #e7e3eb;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul a {
+  display: block;
+  text-decoration: none;
+  padding: 1em;
+  color: #7a6eaa;
+}
+
+nav li:hover .menu-sub {
+  display: block;
+  background-color: #fff;
+}
+
+.menu-sub li {
+  display: block;
+}
+
+nav a:hover {
+  background-color: #f6f6f6;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .left-nav {
+    display: none;
+  }
+  .menu-sub-second {
+    display: block;
+  }
+  .mobile {
+    margin-top: 0.5em;
+  }
+}/*# sourceMappingURL=nav.css.map */

@@ -8,7 +8,7 @@ $colors: (
 );
 
 $text-color-primary: #280d5f;
-$text-color-secondary: #a8a0c7;
+$text-color-secondary: #7a6eaa;
 $text-colors: (
   "primary": $text-color-primary,
   "secondary": $text-color-secondary,
@@ -37,7 +37,7 @@ $weights: (
 
 $border-radius: 24px;
 
-$breakpoints: (
+$screen: (
   "lg": 968px,
   "md": 852px,
   "sm": 576px,

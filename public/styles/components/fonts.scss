@@ -3,7 +3,7 @@
 
 .text {
   font-size: map.get(var.$sizes, "sm");
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   font-weight: map.get(var.$weights, "light");
   color: var.$text-color-primary;
 
@@ -17,7 +17,7 @@
 
 .title {
   font-size: map.get(var.$sizes, "xl");
-  font-family: Kanit;
+  font-family: Kanit, sans-serif;
   font-weight: map.get(var.$weights, "bold");
   color: var.$text-color-primary;
 
