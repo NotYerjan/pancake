@@ -148,7 +148,7 @@ section {
   top: calc(100% - 56px);
 }
 .footbar nav {
-  background-color: #fff;
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.3);
 }
 .footbar nav .nav-left {
   width: 100%;
@@ -185,11 +185,14 @@ section {
 }
 
 nav {
+  position: sticky;
+  top: 0;
   height: 56px;
   width: 100%;
-  border-bottom: 1px solid #7a6eaa;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   padding: 0 16px;
   display: flex;
+  background-color: #fff;
 }
 nav .logo {
   cursor: pointer;
@@ -210,6 +213,7 @@ nav .nav-left {
 }
 nav .nav-left .left-nav {
   display: none;
+  box-shadow: none;
 }
 nav .nav-left .flex-menu-sub:hover {
   background-color: #f6f6f6;
