@@ -390,5 +390,150 @@ nav .nav-right .lang:hover .lang-list {
     display: block;
   }
 }
+#topMainSVG {
+  position: absolute;
+}
+
+.section-1 {
+  position: absolute;
+  top: 100px;
+  padding: 0px 50px 0px 50px;
+}
+.section-1 .topBox {
+  max-width: 1112px;
+  height: 200px;
+  background-color: rgb(84, 6, 123);
+  border-radius: 30px;
+  padding: 30px 0px 0px 30px;
+}
+.section-1 .topBox .topBoxFlex {
+  position: relative;
+}
+.section-1 .topBox .topBoxFlex .topBoxContent1 {
+  color: whitesmoke;
+  font-size: 20px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+}
+.section-1 .topBox .topBoxFlex .topBoxContent2 {
+  color: rgb(193, 210, 4);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.221);
+  max-width: 170px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin: 10px 0px 20px 0px;
+  box-shadow: 3px 3px 5px #28007e;
+}
+.section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+  position: absolute;
+  top: -50px;
+  right: 0px;
+}
+.section-1 .topBox .topBoxButtonsSwitchs {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 576px) {
+  .section-1 {
+    position: absolute;
+    top: 100px;
+    padding: 0px 50px 0px 50px;
+  }
+  .section-1 .topBox {
+    max-width: 712px;
+    height: 190px;
+    padding: 20px 0px 0px 20px;
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent1 {
+    color: whitesmoke;
+    font-size: 20px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent2 {
+    font-size: 20px;
+    max-width: 170px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin: 10px 0px 30px 0px;
+    box-shadow: 3px 3px 5px #28007e;
+  }
+  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+    top: 0px;
+    right: 10px;
+    height: 150px;
+  }
+  .section-1 .topBox .topBoxButtonsSwitchs {
+    padding-top: 0px;
+  }
+  .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+    height: 11px;
+    width: 50px;
+    border-style: none;
+    background-color: whitesmoke;
+    border-radius: 5px 0px 0px 5px;
+    z-index: 100;
+  }
+  .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+    opacity: 0.3;
+    border-radius: 0px 5px 5px 0px;
+  }
+}
+@media screen and (min-width: 852px) {
+  .section-1 {
+    position: absolute;
+    top: 100px;
+    padding: 0px 50px 0px 50px;
+  }
+  .section-1 .topBox {
+    max-width: 1112px;
+    height: 220px;
+    padding: 20px 0px 0px 20px;
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent1 {
+    color: whitesmoke;
+    font-size: 25px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent2 {
+    font-size: 30px;
+  }
+  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+    top: -30px;
+    right: 10px;
+    width: 900px;
+    height: 230px;
+  }
+}
+@media screen and (min-width: 968px) {
+  .section-1 {
+    position: absolute;
+    top: 100px;
+    padding: 0px 50px 0px 50px;
+  }
+  .section-1 .topBox {
+    max-width: 1112px;
+    height: 220px;
+    padding: 20px 0px 0px 20px;
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent1 {
+    color: whitesmoke;
+    font-size: 25px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent2 {
+    font-size: 30px;
+  }
+  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+    top: 0px;
+    right: 10px;
+    height: 150px;
+  }
+  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+    top: -70px;
+    height: 270px;
+    max-width: 1200px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

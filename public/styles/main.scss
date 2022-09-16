@@ -2,5 +2,7 @@
 @use "./components/buttons.scss";
 
 @use "./components/fonts.scss";
+@use "./components/nav.scss"; 
+@use "./homepage_styles/section1.scss";
 
-@use "./components/nav.scss"; // ! breakpoints:968, 852, 576
+// ! breakpoints:968, 852, 576
