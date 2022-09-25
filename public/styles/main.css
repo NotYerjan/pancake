@@ -142,6 +142,7 @@ section {
   }
 }
 .footbar {
+  z-index: 10;
   position: sticky;
   width: 100%;
   height: 0;
@@ -185,6 +186,7 @@ section {
 }
 
 nav {
+  z-index: 10;
   position: sticky;
   top: 0;
   height: 56px;
@@ -390,31 +392,38 @@ nav .nav-right .lang:hover .lang-list {
     display: block;
   }
 }
-#topMainSVG {
-  position: absolute;
-}
-
 .section-1 {
+  overflow: hidden;
+}
+.section-1 .bg-svg {
   position: absolute;
-  top: 100px;
-  padding: 0px 50px 0px 50px;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
 }
 .section-1 .topBox {
-  max-width: 1112px;
-  height: 200px;
-  background-color: rgb(84, 6, 123);
+  z-index: 1;
+  margin: 50px auto;
+  max-width: 95%;
+  max-height: 192px;
+  background: linear-gradient(180deg, #7645d9 0%, #440061 100%);
   border-radius: 30px;
-  padding: 30px 0px 0px 30px;
+  padding: 15px 30px;
+  overflow: hidden;
 }
 .section-1 .topBox .topBoxFlex {
   position: relative;
 }
-.section-1 .topBox .topBoxFlex .topBoxContent1 {
+.section-1 .topBox .topBoxFlex article {
+  z-index: 3;
+}
+.section-1 .topBox .topBoxFlex article .topBoxContent1 {
   color: whitesmoke;
   font-size: 20px;
   text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
 }
-.section-1 .topBox .topBoxFlex .topBoxContent2 {
+.section-1 .topBox .topBoxFlex article .topBoxContent2 {
   color: rgb(193, 210, 4);
   font-size: 30px;
   background-color: rgba(0, 0, 0, 0.221);
@@ -424,26 +433,36 @@ nav .nav-right .lang:hover .lang-list {
   margin: 10px 0px 20px 0px;
   box-shadow: 3px 3px 5px #28007e;
 }
-.section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
+.section-1 .topBox .topBoxFlex picture {
+  z-index: 2;
   position: absolute;
-  top: -50px;
-  right: 0px;
+  bottom: -20;
+  right: -30;
+}
+.section-1 .topBox .topBoxFlex picture #topBoxlotteryImgDex {
+  height: 190px;
 }
 .section-1 .topBox .topBoxButtonsSwitchs {
   display: flex;
   justify-content: center;
+  padding-top: 0px;
+}
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+  height: 11px;
+  width: 50px;
+  border-style: none;
+  background-color: whitesmoke;
+  border-radius: 5px 0px 0px 5px;
+  z-index: 100;
+}
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+  opacity: 0.3;
+  border-radius: 0px 5px 5px 0px;
 }
 
 @media screen and (min-width: 576px) {
-  .section-1 {
-    position: absolute;
-    top: 100px;
-    padding: 0px 50px 0px 50px;
-  }
   .section-1 .topBox {
-    max-width: 712px;
     height: 190px;
-    padding: 20px 0px 0px 20px;
   }
   .section-1 .topBox .topBoxFlex .topBoxContent1 {
     color: whitesmoke;
@@ -458,81 +477,17 @@ nav .nav-right .lang:hover .lang-list {
     margin: 10px 0px 30px 0px;
     box-shadow: 3px 3px 5px #28007e;
   }
-  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
-    top: 0px;
-    right: 10px;
-    height: 150px;
-  }
-  .section-1 .topBox .topBoxButtonsSwitchs {
-    padding-top: 0px;
-  }
-  .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
-    height: 11px;
-    width: 50px;
-    border-style: none;
-    background-color: whitesmoke;
-    border-radius: 5px 0px 0px 5px;
-    z-index: 100;
-  }
-  .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
-    opacity: 0.3;
-    border-radius: 0px 5px 5px 0px;
-  }
 }
 @media screen and (min-width: 852px) {
-  .section-1 {
-    position: absolute;
-    top: 100px;
-    padding: 0px 50px 0px 50px;
-  }
   .section-1 .topBox {
-    max-width: 1112px;
     height: 220px;
-    padding: 20px 0px 0px 20px;
   }
   .section-1 .topBox .topBoxFlex .topBoxContent1 {
     color: whitesmoke;
-    font-size: 25px;
     text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
   }
   .section-1 .topBox .topBoxFlex .topBoxContent2 {
     font-size: 30px;
-  }
-  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
-    top: -30px;
-    right: 10px;
-    width: 900px;
-    height: 230px;
-  }
-}
-@media screen and (min-width: 968px) {
-  .section-1 {
-    position: absolute;
-    top: 100px;
-    padding: 0px 50px 0px 50px;
-  }
-  .section-1 .topBox {
-    max-width: 1112px;
-    height: 220px;
-    padding: 20px 0px 0px 20px;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent1 {
-    color: whitesmoke;
-    font-size: 25px;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent2 {
-    font-size: 30px;
-  }
-  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
-    top: 0px;
-    right: 10px;
-    height: 150px;
-  }
-  .section-1 .topBox .topBoxFlex #topBoxlotteryImgDex {
-    top: -70px;
-    height: 270px;
-    max-width: 1200px;
   }
 }
 
