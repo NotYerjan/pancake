@@ -15,7 +15,7 @@
   .topBox {
     z-index: 1;
     margin: 50px auto;
-    max-width: 95%;
+    max-width: calc(100% - 20px);
     max-height: 192px;
     background: linear-gradient(
       180deg,
@@ -30,7 +30,8 @@
     .topBoxFlex {
       position: relative;
       article {
-        z-index: 3;
+        position: relative;
+        z-index: 1;
         .topBoxContent1 {
           color: whitesmoke;
           font-size: 20px;
@@ -49,7 +50,6 @@
         }
       }
       picture {
-        z-index: 2;
         position: absolute;
         bottom: -20;
         right: -30;

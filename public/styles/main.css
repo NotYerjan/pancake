@@ -405,7 +405,7 @@ nav .nav-right .lang:hover .lang-list {
 .section-1 .topBox {
   z-index: 1;
   margin: 50px auto;
-  max-width: 95%;
+  max-width: calc(100% - 20px);
   max-height: 192px;
   background: linear-gradient(180deg, #7645d9 0%, #440061 100%);
   border-radius: 30px;
@@ -416,7 +416,8 @@ nav .nav-right .lang:hover .lang-list {
   position: relative;
 }
 .section-1 .topBox .topBoxFlex article {
-  z-index: 3;
+  position: relative;
+  z-index: 1;
 }
 .section-1 .topBox .topBoxFlex article .topBoxContent1 {
   color: whitesmoke;
@@ -434,7 +435,6 @@ nav .nav-right .lang:hover .lang-list {
   box-shadow: 3px 3px 5px #28007e;
 }
 .section-1 .topBox .topBoxFlex picture {
-  z-index: 2;
   position: absolute;
   bottom: -20;
   right: -30;
