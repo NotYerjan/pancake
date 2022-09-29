@@ -3,13 +3,76 @@
 @use "sass:color";
 
 .section-1 {
-  overflow: hidden;
-  .bg-svg {
-    position: absolute;
-    min-height: 100vh;
-    top: 0;
-    left: 0;
-    opacity: 0.1;
+  // position: relative;
+  // .bg-svg{
+  //   position: absolute;
+
+  //   height: 130vh;
+  //   z-index: 0;
+  //   opacity: 0.3;
+
+  // }
+
+  .sec1SecondSec {
+    display: flex;
+    flex-direction: column;
+    max-width: 920px;
+    margin: 0px auto 100px;
+    padding: 16px 24px;
+    .secondFlex1 {
+      max-width: 600px;
+      order: 1;
+      margin: 0 auto;
+
+      .firstSecBottomTopText {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 40px;
+        color: #500fdbdc;
+        margin-bottom: 24px;
+      }
+
+      .firstSecBottomBottomText2 {
+        font-size: 20px;
+        line-height: 23px;
+        color: #280d5f;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+    }
+    .thirdFlex1 {
+      #imgHomePageSection1 {
+        height: 200px;
+        width: 200px;
+        float: right;
+        animation: imgHomePageSection 5s infinite;
+        position: relative;
+      }
+      @keyframes imgHomePageSection {
+        0% {
+          top: -50px;
+          right: 25px;
+        }
+        25% {
+          top: -30px;
+          right: 30px;
+        }
+
+        50% {
+          top: -25px;
+          right: 25px;
+        }
+
+        75% {
+          top: -30px;
+          right: 25px;
+        }
+        100% {
+          top: -50px;
+          right: 25px;
+        }
+      }
+    }
   }
 
   .topBox {
@@ -85,6 +148,14 @@
 
 @media screen and (min-width: map.get(var.$screen, "sm")) {
   .section-1 {
+    .sec1SecondSec {
+      max-width: 920px;
+      padding: 32px 24px;
+      .secondFlex1 {
+        max-width: 100%;
+      }
+    }
+
     .topBox {
       height: 190px;
 
@@ -110,6 +181,29 @@
 
 @media screen and (min-width: map.get(var.$screen, "md")) {
   .section-1 {
+    .sec1SecondSec {
+      flex-direction: row;
+      max-width: 920px;
+
+      padding: 16px 24px;
+      .secondFlex1 {
+        order: 1;
+        align-self: center;
+
+        .firstSecBottomTopText {
+          font-size: 48px;
+          font-weight: 600;
+        }
+      }
+      .thirdFlex1 {
+        order: 2;
+        #imgHomePageSection1 {
+          height: 400px;
+          width: 400px;
+        }
+      }
+    }
+
     .topBox {
       height: 220px;
 
