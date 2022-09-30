@@ -392,7 +392,7 @@ nav .nav-right .lang:hover .lang-list {
 }
 footer {
   background-color: #27262c;
-  padding: 40px 16px;
+  padding: 20px 5px;
   margin-bottom: 44px;
   display: flex;
 }
@@ -404,27 +404,20 @@ footer .first-child-footer {
 }
 footer .logo-footer-mobile {
   vertical-align: baseline;
-  margin-left: 1em;
+  margin-left: -12px;
 }
 footer .nav-footer {
   display: flex;
   order: 2;
   justify-content: space-between;
-  margin-left: 0;
-  max-width: 95%;
-  margin: auto;
-  width: 1200px;
 }
 footer .nav-footer ul {
   list-style: none;
   margin-bottom: 40px;
+  padding-left: 0;
 }
 footer .nav-footer li {
   padding: 0.3em 0;
-}
-footer .child-nav-footer:hover,
-footer .yellow-color:hover {
-  border-bottom: 1px solid #f4eeff;
 }
 footer .child-nav-footer {
   color: #f4eeff;
@@ -448,6 +441,7 @@ footer .yellow-color {
 footer .icons {
   display: flex;
   order: 2;
+  margin: -10px;
 }
 footer .menu-list {
   position: relative;
@@ -516,7 +510,7 @@ footer .flex-bottom {
 footer .flex-lang-bottom {
   border-top: 1px solid #383241;
   border-bottom: 1px solid #383241;
-  padding: 24px 30px;
+  padding: 24px 0;
   margin-bottom: 24px;
   display: flex;
   flex-direction: column;
@@ -528,6 +522,7 @@ footer .col-2 {
   width: 100%;
   order: -1;
   align-items: center;
+  margin-left: -10px;
 }
 footer .cake {
   margin-left: auto;
@@ -721,6 +716,15 @@ footer .logo-footer-desktop {
     width: auto;
     margin-left: auto;
     order: 2;
+  }
+  .nav-footer,
+.icons,
+.flex-lang-bottom {
+    width: 90%;
+    margin: auto;
+  }
+  .icons {
+    padding-left: 70px;
   }
 }
 

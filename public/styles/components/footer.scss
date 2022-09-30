@@ -5,7 +5,7 @@
 footer {
   background-color: #27262c;
 
-  padding: 40px 16px;
+  padding: 20px 5px;
   margin-bottom: 44px;
   display: flex;
   //justify-content: center;
@@ -18,31 +18,22 @@ footer {
   .logo-footer-mobile {
     //display: none;
     vertical-align: baseline;
-    margin-left: 1em;
+    margin-left: -12px;
   }
   .nav-footer {
     display: flex;
     order: 2;
     justify-content: space-between;
-    //flex-direction: column;
-    //align-items: flex-start;
-
-    margin-left: 0;
-    max-width: 95%;
-    margin: auto;
-    width: 1200px;
   }
   .nav-footer ul {
     list-style: none;
     margin-bottom: 40px;
+    padding-left: 0;
   }
   .nav-footer li {
     padding: 0.3em 0;
   }
-  .child-nav-footer:hover,
-  .yellow-color:hover {
-    border-bottom: 1px solid #f4eeff;
-  }
+
   .child-nav-footer {
     color: #f4eeff;
     font-weight: 400;
@@ -66,6 +57,7 @@ footer {
   .icons {
     display: flex;
     order: 2;
+    margin: -10px;
   }
   .menu-list {
     position: relative;
@@ -134,7 +126,7 @@ footer {
   .flex-lang-bottom {
     border-top: 1px solid #383241;
     border-bottom: 1px solid #383241;
-    padding: 24px 30px;
+    padding: 24px 0;
     margin-bottom: 24px;
     display: flex;
     //order: 1;
@@ -147,6 +139,7 @@ footer {
     width: 100%;
     order: -1;
     align-items: center;
+    margin-left: -10px;
   }
   .cake {
     margin-left: auto;
@@ -345,5 +338,15 @@ footer {
     width: auto;
     margin-left: auto;
     order: 2;
+  }
+  .nav-footer,
+  .icons,
+  .flex-lang-bottom {
+    width: 90%;
+
+    margin: auto;
+  }
+  .icons {
+    padding-left: 70px;
   }
 }
