@@ -1,0 +1,222 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+@use "sass:color";
+
+.section-1 {
+  // position: relative;
+  // .bg-svg{
+  //   position: absolute;
+
+  //   height: 130vh;
+  //   z-index: 0;
+  //   opacity: 0.3;
+
+  // }
+
+  .sec1SecondSec {
+    display: flex;
+    flex-direction: column;
+    max-width: 920px;
+    margin: 0px auto 100px;
+    padding: 16px 24px;
+    .secondFlex1 {
+      max-width: 600px;
+      order: 1;
+      margin: 0 auto;
+
+      .firstSecBottomTopText {
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 40px;
+        color: #500fdbdc;
+        margin-bottom: 24px;
+      }
+
+      .firstSecBottomBottomText2 {
+        font-size: 20px;
+        line-height: 23px;
+        color: #280d5f;
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+    }
+    .thirdFlex1 {
+      #imgHomePageSection1 {
+        height: 200px;
+        width: 200px;
+        float: right;
+        animation: imgHomePageSection 5s infinite;
+        position: relative;
+      }
+      @keyframes imgHomePageSection {
+        0% {
+          top: -50px;
+          right: 25px;
+        }
+        25% {
+          top: -30px;
+          right: 30px;
+        }
+
+        50% {
+          top: -25px;
+          right: 25px;
+        }
+
+        75% {
+          top: -30px;
+          right: 25px;
+        }
+        100% {
+          top: -50px;
+          right: 25px;
+        }
+      }
+    }
+  }
+
+  .topBox {
+    z-index: 1;
+    margin: 50px auto;
+    max-width: 95%;
+    max-height: 192px;
+    background: linear-gradient(
+      180deg,
+      var.$color-primary 0%,
+      color.adjust(var.$color-primary, $red: -50, $green: -120, $blue: -120)
+        100%
+    );
+    border-radius: 30px;
+    padding: 15px 30px;
+    overflow: hidden;
+
+    .topBoxFlex {
+      position: relative;
+      article {
+        z-index: 3;
+        .topBoxContent1 {
+          color: whitesmoke;
+          font-size: 20px;
+          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+        }
+
+        .topBoxContent2 {
+          color: rgb(193, 210, 4);
+          font-size: 30px;
+          background-color: rgba(0, 0, 0, 0.221);
+          max-width: 170px;
+          padding: 3px 10px;
+          border-radius: 10px;
+          margin: 10px 0px 20px 0px;
+          box-shadow: 3px 3px 5px #28007e;
+        }
+      }
+      picture {
+        z-index: 2;
+        position: absolute;
+        bottom: -20;
+        right: -30;
+
+        #topBoxlotteryImgDex {
+          height: 190px;
+        }
+      }
+    }
+
+    .topBoxButtonsSwitchs {
+      display: flex;
+      justify-content: center;
+      padding-top: 0px;
+
+      #topBoxButtonsSwitch1 {
+        height: 11px;
+        width: 50px;
+        border-style: none;
+        background-color: whitesmoke;
+        border-radius: 5px 0px 0px 5px;
+        z-index: 100;
+      }
+
+      #topBoxButtonsSwitch2 {
+        @extend #topBoxButtonsSwitch1;
+        opacity: 0.3;
+        border-radius: 0px 5px 5px 0px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .section-1 {
+    .sec1SecondSec {
+      max-width: 920px;
+      padding: 32px 24px;
+      .secondFlex1 {
+        max-width: 100%;
+      }
+    }
+
+    .topBox {
+      height: 190px;
+
+      .topBoxFlex {
+        .topBoxContent1 {
+          color: whitesmoke;
+          font-size: 20px;
+          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+        }
+
+        .topBoxContent2 {
+          font-size: 20px;
+          max-width: 170px;
+          padding: 3px 10px;
+          border-radius: 10px;
+          margin: 10px 0px 30px 0px;
+          box-shadow: 3px 3px 5px #28007e;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .section-1 {
+    .sec1SecondSec {
+      flex-direction: row;
+      max-width: 920px;
+
+      padding: 16px 24px;
+      .secondFlex1 {
+        order: 1;
+        align-self: center;
+
+        .firstSecBottomTopText {
+          font-size: 48px;
+          font-weight: 600;
+        }
+      }
+      .thirdFlex1 {
+        order: 2;
+        #imgHomePageSection1 {
+          height: 400px;
+          width: 400px;
+        }
+      }
+    }
+
+    .topBox {
+      height: 220px;
+
+      .topBoxFlex {
+        .topBoxContent1 {
+          color: whitesmoke;
+          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+        }
+
+        .topBoxContent2 {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
