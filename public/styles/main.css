@@ -694,78 +694,44 @@ nav .nav-right .lang:hover .lang-list {
   right: -50;
   width: 192px;
   height: 192px;
-  animation: sec3TopImgEthurmin 2s infinite;
+  animation: sec3TopImgEthurmin ease-in-out 1s infinite alternate;
+  animation-delay: 0.6s;
 }
 .section-3 .sec3TopImses #sec3TopImgBitcoin {
-  animation: sec3TopImgBitcoin 3s infinite;
+  animation: sec3TopImgBitcoin ease-in-out 1s infinite alternate;
+  animation-delay: 0.3s;
 }
 .section-3 .sec3TopImses #sec3TopImgCake {
-  animation: sec3TopImgCake 4s infinite;
+  animation: sec3TopImgCake ease-in-out 1s infinite alternate;
 }
 @keyframes sec3TopImgEthurmin {
   0% {
-    top: 2px;
-    right: 2px;
-  }
-  25% {
-    top: 6px;
-    right: 4px;
-  }
-  50% {
-    top: 8px;
-    right: 6px;
-  }
-  75% {
-    top: 6px;
-    right: 4px;
+    top: 0;
+    left: 0;
   }
   100% {
-    top: 2px;
-    right: 2px;
+    top: 20px;
+    left: 10px;
   }
 }
 @keyframes sec3TopImgBitcoin {
   0% {
-    top: 2px;
-    right: 2px;
-  }
-  25% {
-    top: 4px;
-    right: 4px;
-  }
-  50% {
-    top: 6px;
-    right: 6px;
-  }
-  75% {
-    top: 4px;
-    right: 4px;
+    top: 0;
+    left: 0;
   }
   100% {
-    top: 2px;
-    right: 2px;
+    top: 15px;
+    left: 10px;
   }
 }
 @keyframes sec3TopImgCake {
   0% {
-    top: 2px;
-    right: 2px;
-  }
-  25% {
-    top: 4px;
-    right: 4px;
-  }
-  50% {
-    top: 6px;
-    right: 6px;
-  }
-  75% {
-    top: 4px;
-    right: 4px;
+    top: 0;
+    left: 0;
   }
   100% {
-    top: 2px;
-    right: 2px;
+    top: 10px;
+    left: 10px;
   }
 }
 .section-3 section {
@@ -801,13 +767,6 @@ nav .nav-right .lang:hover .lang-list {
   .section-3 .sec3TopImses #sec3TopImgEthurmin, .section-3 .sec3TopImses #sec3TopImgBitcoin, .section-3 .sec3TopImses #sec3TopImgCake {
     width: 378px;
     height: 378px;
-    animation: sec3TopImgEthurmin 2s infinite;
-  }
-  .section-3 .sec3TopImses #sec3TopImgBitcoin {
-    animation: sec3TopImgBitcoin 3s infinite;
-  }
-  .section-3 .sec3TopImses #sec3TopImgCake {
-    animation: sec3TopImgCake 4s infinite;
   }
   .section-3 section {
     max-width: 378px;
