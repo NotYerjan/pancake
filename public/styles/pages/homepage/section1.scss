@@ -3,16 +3,20 @@
 @use "sass:color";
 
 .section-1 {
-  overflow: hidden;
-  .bg-svg {
+  .bg-image {
     position: absolute;
-    min-height: 100vh;
+    right: 0;
     top: 0;
-    left: 0;
-    opacity: 0.1;
+    width: 100%;
+    overflow: hidden;
+    .bg-svg {
+      opacity: 0.1;
+      width: 100%;
+    }
   }
 
   .topBox {
+    position: relative;
     z-index: 1;
     margin: 50px auto;
     max-width: calc(100% - 20px);
@@ -102,25 +106,6 @@
           border-radius: 10px;
           margin: 10px 0px 30px 0px;
           box-shadow: 3px 3px 5px #28007e;
-        }
-      }
-    }
-  }
-}
-
-@media screen and (min-width: map.get(var.$screen, "md")) {
-  .section-1 {
-    .topBox {
-      height: 220px;
-
-      .topBoxFlex {
-        .topBoxContent1 {
-          color: whitesmoke;
-          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-        }
-
-        .topBoxContent2 {
-          font-size: 30px;
         }
       }
     }

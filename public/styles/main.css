@@ -23,7 +23,11 @@ section {
   margin: 0 auto;
 }
 
-.btn, .btn-secondary, .btn-outline, .btn-primary, .btn-small {
+.btn,
+.btn-secondary,
+.btn-outline,
+.btn-primary,
+.btn-small {
   height: 48px;
   padding: 0 24px;
   border: 0;
@@ -35,10 +39,15 @@ section {
   font-weight: 600;
   transition: 0.2s linear;
 }
-.btn:hover, .btn-secondary:hover, .btn-outline:hover, .btn-primary:hover, .btn-small:hover {
+.btn:hover,
+.btn-secondary:hover,
+.btn-outline:hover,
+.btn-primary:hover,
+.btn-small:hover {
   opacity: 60%;
 }
-.btn-primary, .btn-small {
+.btn-primary,
+.btn-small {
   color: white;
   background-color: #1fc7d4;
   box-shadow: 0 1px #12737b;
@@ -60,7 +69,9 @@ section {
   text-decoration-line: underline;
 }
 
-.text, .text-secondary, .text-primary {
+.text,
+.text-secondary,
+.text-primary {
   font-size: 16px;
   font-family: Kanit, sans-serif;
   color: #280d5f;
@@ -72,7 +83,10 @@ section {
   color: #7a6eaa;
 }
 
-.title, .title-tertiary, .title-secondary, .title-primary {
+.title,
+.title-tertiary,
+.title-secondary,
+.title-primary {
   font-size: 40px;
   font-family: Kanit, sans-serif;
   color: #280d5f;
@@ -134,10 +148,12 @@ section {
 }
 
 @keyframes blink {
-  3%, 100% {
+  3%,
+  100% {
     opacity: 0;
   }
-  5%, 100% {
+  5%,
+  100% {
     opacity: 1;
   }
 }
@@ -392,17 +408,19 @@ nav .nav-right .lang:hover .lang-list {
     display: block;
   }
 }
-.section-1 {
+.section-1 .bg-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
   overflow: hidden;
 }
-.section-1 .bg-svg {
-  position: absolute;
-  min-height: 100vh;
-  top: 0;
-  left: 0;
+.section-1 .bg-image .bg-svg {
   opacity: 0.1;
+  width: 100%;
 }
 .section-1 .topBox {
+  position: relative;
   z-index: 1;
   margin: 50px auto;
   max-width: calc(100% - 20px);
@@ -447,7 +465,8 @@ nav .nav-right .lang:hover .lang-list {
   justify-content: center;
   padding-top: 0px;
 }
-.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1,
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
   height: 11px;
   width: 50px;
   border-style: none;
@@ -476,18 +495,6 @@ nav .nav-right .lang:hover .lang-list {
     border-radius: 10px;
     margin: 10px 0px 30px 0px;
     box-shadow: 3px 3px 5px #28007e;
-  }
-}
-@media screen and (min-width: 852px) {
-  .section-1 .topBox {
-    height: 220px;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent1 {
-    color: whitesmoke;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent2 {
-    font-size: 30px;
   }
 }
 
