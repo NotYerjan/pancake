@@ -1,0 +1,161 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+@use "sass:color";
+
+.section-3 {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 16px;
+  max-width: 920px;
+  margin: 0px auto;
+  .sec3TopImses {
+    position: relative;
+    margin-right: calc(100px - 10vw);
+
+    width: 192px;
+    height: 192px;
+
+    #sec3TopImgEthurmin {
+      position: absolute;
+      top: 0;
+      right: -50;
+      width: 192px;
+      height: 192px;
+      animation: sec3TopImgEthurmin 2s infinite;
+    }
+    #sec3TopImgBitcoin {
+      @extend #sec3TopImgEthurmin;
+      animation: sec3TopImgBitcoin 3s infinite;
+    }
+    #sec3TopImgCake {
+      @extend #sec3TopImgEthurmin;
+      animation: sec3TopImgCake 4s infinite;
+    }
+
+    @keyframes sec3TopImgEthurmin {
+      0% {
+        top: 2px;
+        right: 2px;
+      }
+      25% {
+        top: 6px;
+        right: 4px;
+      }
+      50% {
+        top: 8px;
+        right: 6px;
+      }
+      75% {
+        top: 6px;
+        right: 4px;
+      }
+      100% {
+        top: 2px;
+        right: 2px;
+      }
+    }
+
+    @keyframes sec3TopImgBitcoin {
+      0% {
+        top: 2px;
+        right: 2px;
+      }
+      25% {
+        top: 4px;
+        right: 4px;
+      }
+      50% {
+        top: 6px;
+        right: 6px;
+      }
+      75% {
+        top: 4px;
+        right: 4px;
+      }
+      100% {
+        top: 2px;
+        right: 2px;
+      }
+    }
+
+    @keyframes sec3TopImgCake {
+      0% {
+        top: 2px;
+        right: 2px;
+      }
+      25% {
+        top: 4px;
+        right: 4px;
+      }
+      50% {
+        top: 6px;
+        right: 6px;
+      }
+      75% {
+        top: 4px;
+        right: 4px;
+      }
+      100% {
+        top: 2px;
+        right: 2px;
+      }
+    }
+  }
+
+  section {
+    padding-left: 10px;
+    .sec3TopText1 {
+      font-size: 32px;
+      color: #280d5f;
+      margin: 0 0 24px;
+      font-weight: 600;
+      line-height: 30px;
+
+      #sec3TopText1Init {
+        color: #7645d9;
+      }
+    }
+    .sec3TopText2 {
+      font-size: 16px;
+      margin: 0px 0px 24px;
+      color: #7a6eaa;
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .section-3 {
+    flex-direction: row;
+
+    margin: 0px auto;
+
+    .sec3TopImses {
+      order: 2;
+      margin-right: 2rem;
+      width: 378px;
+      height: 378px;
+
+      #sec3TopImgEthurmin {
+        width: 378px;
+        height: 378px;
+        animation: sec3TopImgEthurmin 2s infinite;
+      }
+      #sec3TopImgBitcoin {
+        @extend #sec3TopImgEthurmin;
+        animation: sec3TopImgBitcoin 3s infinite;
+      }
+      #sec3TopImgCake {
+        @extend #sec3TopImgEthurmin;
+        animation: sec3TopImgCake 4s infinite;
+      }
+    }
+
+    section {
+      max-width: 378px;
+      order: 1;
+      align-self: center;
+      padding-left: 10px;
+    }
+  }
+}
