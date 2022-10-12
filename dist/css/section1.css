@@ -1,0 +1,205 @@
+.section-1 .bg-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.section-1 .bg-image .bg-svg {
+  opacity: 0.1;
+  width: 100%;
+}
+.section-1 .sec1SecondSec {
+  display: flex;
+  flex-direction: column;
+  max-width: 920px;
+  margin: 0px auto 100px;
+  padding: 16px 24px;
+}
+.section-1 .sec1SecondSec .secondFlex1 {
+  max-width: 600px;
+  order: 1;
+  margin: 0 auto;
+}
+.section-1 .sec1SecondSec .secondFlex1 .firstSecBottomTopText {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 40px;
+  color: rgba(80, 15, 219, 0.862745098);
+  margin-bottom: 24px;
+}
+.section-1 .sec1SecondSec .secondFlex1 .firstSecBottomBottomText2 {
+  font-size: 20px;
+  line-height: 23px;
+  color: #280d5f;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.section-1 .sec1SecondSec .thirdFlex1 #imgHomePageSection1 {
+  height: 200px;
+  width: 200px;
+  float: right;
+  -webkit-animation: imgHomePageSection 5s infinite;
+          animation: imgHomePageSection 5s infinite;
+  position: relative;
+}
+@-webkit-keyframes imgHomePageSection {
+  0% {
+    top: -50px;
+    right: 25px;
+  }
+  25% {
+    top: -30px;
+    right: 30px;
+  }
+  50% {
+    top: -25px;
+    right: 25px;
+  }
+  75% {
+    top: -30px;
+    right: 25px;
+  }
+  100% {
+    top: -50px;
+    right: 25px;
+  }
+}
+@keyframes imgHomePageSection {
+  0% {
+    top: -50px;
+    right: 25px;
+  }
+  25% {
+    top: -30px;
+    right: 30px;
+  }
+  50% {
+    top: -25px;
+    right: 25px;
+  }
+  75% {
+    top: -30px;
+    right: 25px;
+  }
+  100% {
+    top: -50px;
+    right: 25px;
+  }
+}
+.section-1 .topBox {
+  position: relative;
+  z-index: 1;
+  margin: 50px auto;
+  max-width: calc(100% - 20px);
+  max-height: 192px;
+  background: linear-gradient(180deg, #7645d9 0%, #440061 100%);
+  border-radius: 30px;
+  padding: 15px 30px;
+  overflow: hidden;
+}
+.section-1 .topBox .topBoxFlex {
+  position: relative;
+}
+.section-1 .topBox .topBoxFlex article {
+  position: relative;
+  z-index: 1;
+}
+.section-1 .topBox .topBoxFlex article .topBoxContent1 {
+  color: whitesmoke;
+  font-size: 20px;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+}
+.section-1 .topBox .topBoxFlex article .topBoxContent2 {
+  color: rgb(193, 210, 4);
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.221);
+  max-width: 170px;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin: 10px 0px 20px 0px;
+  box-shadow: 3px 3px 5px #28007e;
+}
+.section-1 .topBox .topBoxFlex picture {
+  position: absolute;
+  bottom: -20;
+  right: -30;
+}
+.section-1 .topBox .topBoxFlex picture #topBoxlotteryImgDex {
+  height: 190px;
+}
+.section-1 .topBox .topBoxButtonsSwitchs {
+  display: flex;
+  justify-content: center;
+  padding-top: 0px;
+}
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+  height: 11px;
+  width: 50px;
+  border-style: none;
+  background-color: whitesmoke;
+  border-radius: 5px 0px 0px 5px;
+  z-index: 100;
+}
+.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
+  opacity: 0.3;
+  border-radius: 0px 5px 5px 0px;
+}
+
+@media screen and (min-width: 576px) {
+  .section-1 .sec1SecondSec {
+    max-width: 920px;
+    padding: 32px 24px;
+  }
+  .section-1 .sec1SecondSec .secondFlex1 {
+    max-width: 100%;
+  }
+  .section-1 .topBox {
+    height: 190px;
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent1 {
+    color: whitesmoke;
+    font-size: 20px;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent2 {
+    font-size: 20px;
+    max-width: 170px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    margin: 10px 0px 30px 0px;
+    box-shadow: 3px 3px 5px #28007e;
+  }
+}
+@media screen and (min-width: 852px) {
+  .section-1 .sec1SecondSec {
+    flex-direction: row;
+    max-width: 920px;
+    padding: 16px 24px;
+  }
+  .section-1 .sec1SecondSec .secondFlex1 {
+    order: 1;
+    align-self: center;
+  }
+  .section-1 .sec1SecondSec .secondFlex1 .firstSecBottomTopText {
+    font-size: 48px;
+    font-weight: 600;
+  }
+  .section-1 .sec1SecondSec .thirdFlex1 {
+    order: 2;
+  }
+  .section-1 .sec1SecondSec .thirdFlex1 #imgHomePageSection1 {
+    height: 400px;
+    width: 400px;
+  }
+  .section-1 .topBox {
+    height: 220px;
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent1 {
+    color: whitesmoke;
+    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+  }
+  .section-1 .topBox .topBoxFlex .topBoxContent2 {
+    font-size: 30px;
+  }
+}/*# sourceMappingURL=section1.css.map */

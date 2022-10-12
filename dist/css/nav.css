@@ -15,6 +15,7 @@
   }
 }
 .footbar {
+  z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   width: 100%;
@@ -59,6 +60,7 @@
 }
 
 nav {
+  z-index: 10;
   position: -webkit-sticky;
   position: sticky;
   top: 0;

@@ -1,0 +1,101 @@
+.section2Main .section2MainCntrol {
+  background-image: linear-gradient(180deg, white, rgba(118, 69, 217, 0.2078431373));
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3vw));
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3vw));
+  padding-bottom: 100px;
+}
+.section2Main .section2MainCntrol .section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section2Main .section2MainCntrol .section2 .section2TopMainImg {
+  height: 45px;
+  width: 40px;
+  margin: 0 auto;
+}
+.section2Main .section2MainCntrol .section2 .section2Header1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 35px;
+  text-align: center;
+}
+.section2Main .section2MainCntrol .section2 .section2TopTexts {
+  font-size: 16px;
+  color: #7a6eaa;
+  padding: 0 5px;
+  text-align: center;
+}
+.section2Main .section2MainCntrol .section2 .section2TopBlockText {
+  margin: 20 auto 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #7a6eaa;
+}
+.section2Main .section2MainCntrol .section2BlockFlex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks {
+  position: relative;
+  margin: 0 auto;
+  width: 280px;
+  height: 170px;
+  border-style: none;
+  box-shadow: 0.2px 3.1px rgba(118, 69, 217, 0.137254902);
+  z-index: 10;
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2Box1Img {
+  width: 35px;
+  height: 30px;
+  position: absolute;
+  top: 35px;
+  right: 25px;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockTexts {
+  font-size: 30px;
+  font-weight: 600;
+  color: #280d5f;
+  margin-bottom: -15px;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockText1 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #7645d9;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockText2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #1fc7d4;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockText3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #ed4b9e;
+}
+.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockTextB {
+  font-size: 17px;
+  color: #7a6eaa;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 852px) {
+  .section2Main .section2MainCntrol .section2BlockFlex {
+    flex-direction: row;
+    gap: 15px;
+  }
+  .section2Main .section2MainCntrol .section2BlockFlex .section2Blocks {
+    margin: 0;
+    width: 280px;
+    height: 280px;
+    padding: 24px;
+  }
+  .section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2BlockTexts {
+    margin-top: 110px;
+  }
+}/*# sourceMappingURL=section2.css.map */
