@@ -20,6 +20,7 @@
   font-family: Kanit, sans-serif;
   font-weight: map.get(var.$weights, "bold");
   color: var.$text-color-primary;
+  line-height: 1.1;
 
   @each $name, $color in var.$colors {
     &-#{$name} {
