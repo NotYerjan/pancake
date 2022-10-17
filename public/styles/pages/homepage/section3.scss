@@ -4,35 +4,28 @@
 
 @keyframes sec3TopImgEthurmin {
   0% {
-    top: 0;
-    left: 0;
+    transform: translate(0px);
   }
-
   100% {
-    top: 15px;
-    left: 10px;
+    transform: translate(10px, 15px);
   }
 }
 
 @keyframes sec3TopImgBitcoin {
   0% {
-    top: 0;
-    left: 0;
+    transform: translate(0px);
   }
   100% {
-    top: 15px;
-    left: 10px;
+    transform: translate(10px, 15px);
   }
 }
 
 @keyframes sec3TopImgCake {
   0% {
-    top: 0;
-    left: 0;
+    transform: translate(0px);
   }
   100% {
-    top: 10px;
-    left: 10px;
+    transform: translate(10px, 10px);
   }
 }
 
@@ -50,18 +43,20 @@
 
       #sec3TopImgEthurmin {
         position: absolute;
+        top: 0;
+        left: 0;
         width: 210px;
-        animation: sec3TopImgEthurmin ease-in-out 1s infinite alternate;
-        animation-delay: 0.6s;
+        animation: sec3TopImgEthurmin ease-in-out 2s infinite alternate;
+        animation-delay: 1s;
       }
       #sec3TopImgBitcoin {
         @extend #sec3TopImgEthurmin;
-        animation: sec3TopImgBitcoin ease-in-out 1s infinite alternate;
-        animation-delay: 0.3s;
+        animation: sec3TopImgBitcoin ease-in-out 2s infinite alternate;
+        animation-delay: 0.5s;
       }
       #sec3TopImgCake {
         @extend #sec3TopImgEthurmin;
-        animation: sec3TopImgCake ease-in-out 1s infinite alternate;
+        animation: sec3TopImgCake ease-in-out 2s infinite alternate;
       }
     }
 

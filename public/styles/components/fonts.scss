@@ -46,3 +46,18 @@
     }
   }
 }
+
+@media screen and (min-width: map.get(var.$screen, "lg")) {
+  .f {
+    &s {
+      @each $name, $size in var.$sizes {
+        &-lg {
+          font-size: 40px;
+        }
+        &-xxl {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+}

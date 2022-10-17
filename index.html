@@ -283,10 +283,11 @@
     </nav>
    <!-- the background svg color for the main page of the website and for the top of it -->
     <div class="section-1">
-      <!-- <img class="bg-svg" src="./public/images/svg/bg-image.svg" alt="background image"> -->
+      <div class="bg-image">
+        <img class="bg-svg" src="./public/images/svg/bg-image.svg" alt="background image">
+      </div>
       <section>
         <div class="topBox">
-
           <div class="topBoxFlex">
             <picture>
               <source media="(min-width:750px)" srcset="./public/images/img/topBoxlottery.webp">
@@ -299,28 +300,32 @@
             <button class="btn-primary">Play now &rarr;</button>
           </article>
           </div>
-
           <div class="topBoxButtonsSwitchs">
             <button id="topBoxButtonsSwitch1"></button>
             <button id="topBoxButtonsSwitch2"></button>
           </div>
         </div> <!-- the second parts' contents have to be added when we add the javaScript codes!!!! -->
       </section>
-      <div class="sec1SecondSec">
+      <section class="sec1SecondSec">
         <div class="secondFlex1">
-          <div class="firstSecBottomTopText">
+          <h1 class="title-primary fs-xxl fw-600">
             The moon is made  of pancakes.
-          </div>
-          <div class="firstSecBottomBottomText2">
+          </h1>
+          <p class="text-primary fs-md fw-600">
             Trade, earn, and win crypto on the most popular decentralized platform in the galaxy.
+          </p>
+          <div class="buttons">
+            <button class="btn-primary">Connect Wallet</button>
+            <button class="btn-outline">Trade Now</button>
           </div>
-          <button class="btn-primary">Connect Wallet</button>
-          <button class="btn-outline">Trade Now</button>
         </div>
-        <div class="thirdFlex1">
-          <img src="./public/images/img/bunny@2x.webp" alt="toys" id="imgHomePageSection1">
+        <div class="cosmoBunny">
+          <img src="./public/images/img/cosmobunny.webp" alt="toys" class="bunnyImg">
+          <img src="./public/images/img/star-l@2x.webp" alt="star left" class="star1">
+          <img src="./public/images/img/star-r@2x.webp" alt="star right" class="star2">
+          <img src="./public/images/img/star-top-r@2x.webp" alt="star top right" class="star3">
         </div>
-      </div>
+      </section>
     </div>
     
     <div class="section2Main">
