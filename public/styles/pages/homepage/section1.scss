@@ -2,75 +2,74 @@
 @use "sass:map";
 @use "sass:color";
 
+@keyframes bunnyFly {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(-5px, -5px);
+  }
+}
+
+@keyframes starBlink {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
 .section-1 {
+  padding-top: 50px;
+  z-index: -2;
+  position: relative;
+  margin-bottom: 50px;
+  background: hsla(211, 100%, 50%, 0.08);
+
   .bg-image {
+    z-index: -2;
     position: absolute;
-    right: 0;
-    top: 0;
     width: 100%;
-    overflow: hidden;
-    .bg-svg {
-      opacity: 0.1;
-      width: 100%;
-    }
+    bottom: -3px;
   }
   .sec1SecondSec {
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
-    max-width: 920px;
-    margin: 0px auto 100px;
-    padding: 16px 24px;
+    padding: 24px;
+
     .secondFlex1 {
-      max-width: 600px;
       order: 1;
-      margin: 0 auto;
-
-      .firstSecBottomTopText {
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 40px;
-        color: #500fdbdc;
-        margin-bottom: 24px;
-      }
-
-      .firstSecBottomBottomText2 {
-        font-size: 20px;
-        line-height: 23px;
-        color: #280d5f;
-        font-weight: 600;
-        margin-bottom: 24px;
-      }
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
-    .thirdFlex1 {
-      #imgHomePageSection1 {
-        height: 200px;
-        width: 200px;
-        float: right;
-        animation: imgHomePageSection 5s infinite;
-        position: relative;
-      }
-      @keyframes imgHomePageSection {
-        0% {
-          top: -50px;
-          right: 25px;
+    .cosmoBunny {
+      position: relative;
+      margin-left: auto;
+      height: 200px;
+      width: 200px;
+      img {
+        max-height: 512px;
+        max-width: 512px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        &.bunnyImg {
+          animation: bunnyFly ease-in-out 2s infinite alternate;
         }
-        25% {
-          top: -30px;
-          right: 30px;
+        &.star1 {
+          animation: starBlink ease-in-out 3s infinite alternate;
         }
-
-        50% {
-          top: -25px;
-          right: 25px;
+        &.star2 {
+          animation: starBlink ease-in-out 3s infinite alternate;
+          animation-delay: 1s;
         }
-
-        75% {
-          top: -30px;
-          right: 25px;
-        }
-        100% {
-          top: -50px;
-          right: 25px;
+        &.star3 {
+          animation: starBlink ease-in-out 3s infinite alternate;
+          animation-delay: 2s;
         }
       }
     }
@@ -79,7 +78,7 @@
   .topBox {
     position: relative;
     z-index: 1;
-    margin: 50px auto;
+    margin: 0 auto;
     max-width: calc(100% - 20px);
     max-height: 192px;
     background: linear-gradient(
@@ -150,14 +149,6 @@
 
 @media screen and (min-width: map.get(var.$screen, "sm")) {
   .section-1 {
-    .sec1SecondSec {
-      max-width: 920px;
-      padding: 32px 24px;
-      .secondFlex1 {
-        max-width: 100%;
-      }
-    }
-
     .topBox {
       height: 190px;
 
@@ -183,26 +174,20 @@
 
 @media screen and (min-width: map.get(var.$screen, "md")) {
   .section-1 {
+    margin-bottom: 100px;
     .sec1SecondSec {
+      height: 512px;
       flex-direction: row;
-      max-width: 920px;
-
-      padding: 16px 24px;
       .secondFlex1 {
         order: 1;
-        align-self: center;
-
-        .firstSecBottomTopText {
-          font-size: 48px;
-          font-weight: 600;
-        }
+        flex: 1;
       }
-      .thirdFlex1 {
+      .cosmoBunny {
         order: 2;
-        #imgHomePageSection1 {
-          height: 400px;
-          width: 400px;
-        }
+        max-height: 512px;
+        flex: 1;
+        height: 100%;
+        width: 100%;
       }
     }
 
