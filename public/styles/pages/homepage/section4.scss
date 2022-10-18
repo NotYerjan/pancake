@@ -2,31 +2,6 @@
 @use "sass:map";
 @use "sass:color";
 
-@keyframes img-1 {
-  0% {
-    transform: translate(0px, 15px);
-  }
-  100% {
-    transform: translate(0px);
-  }
-}
-@keyframes img-2 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-10px, -15px);
-  }
-}
-@keyframes img-3 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-10px, -10px);
-  }
-}
-
 .passive-income {
   position: relative;
   background: none;
@@ -39,64 +14,15 @@
     position: absolute;
   }
 
-  .bg-color-passive-income {
-    padding: 50px 0;
-
-    img {
-      height: auto;
-      max-width: 100%;
-      margin-right: auto;
-    }
-    .flex-container-pasive {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      padding: 24px;
-      overflow: hidden;
-
-      .col-1 {
-        position: relative;
-        height: 230px;
-
-        .img-1 {
-          bottom: 0;
-          right: 0;
-          position: absolute;
-          width: 210px;
-          animation: img-1 ease-in-out 2s infinite alternate;
-          animation-delay: 1s;
-        }
-        .img-2 {
-          @extend .img-1;
-          animation: img-2 ease-in-out 2s infinite alternate;
-          animation-delay: 0.5s;
-        }
-        .img-3 {
-          @extend .img-1;
-          animation: img-3 ease-in-out 2s infinite alternate;
-        }
-      }
-
-      .col-2 {
-        width: 100%;
-
-        h2 {
-          line-height: 1.1;
-          margin-bottom: 24px;
-        }
-        p {
-          line-height: 1.5;
-          margin-bottom: 24px;
-        }
-      }
+  section {
+    * {
+      z-index: 1;
     }
 
     .flex-bottom {
       padding: 0 24px;
       width: 100%;
-      * {
-        z-index: 1;
-      }
+
       .tittle {
         display: flex;
         margin-bottom: 15px;
@@ -128,7 +54,7 @@
 
 @media screen and (min-width: map.get(var.$screen, "sm")) {
   .passive-income {
-    .bg-color-passive-income {
+    section {
       .flex-bottom {
         .stakes {
           grid-template-columns: repeat(5, auto);
@@ -145,21 +71,10 @@
 
 @media screen and (min-width: map.get(var.$screen, "md")) {
   .passive-income {
-    .bg-color-passive-income {
-      .flex-container-pasive {
-        flex-direction: row;
-        align-items: center;
-        gap: 40px;
-        .col-1 {
-          order: -1;
-          width: 50%;
-          height: 400px;
-          .img-1 {
-            width: 400px;
-          }
-        }
-        .col-2 {
-          width: 50%;
+    section {
+      .call-for-action {
+        .description {
+          order: 0;
         }
       }
     }

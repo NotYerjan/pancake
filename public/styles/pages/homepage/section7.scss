@@ -1,0 +1,57 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+
+.section-7 {
+  text-align: center;
+  position: relative;
+  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+      min-width: 968px;
+    }
+  }
+  .call-for-action {
+    padding: 64px 24px; //80 96
+    * {
+      z-index: 1;
+    }
+    .description {
+      h2 {
+        color: #fff;
+      }
+      p {
+        color: #fff;
+      }
+      .buttons {
+        display: block;
+        .btn-secondary {
+          height: auto;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .section-7 {
+    .call-for-action {
+      padding: 80px 24px; //80 96
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "lg")) {
+  .section-7 {
+    .call-for-action {
+      padding: 96px 24px; //80 96
+    }
+  }
+}

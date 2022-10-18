@@ -4,7 +4,7 @@
 .text {
   font-size: map.get(var.$sizes, "sm");
   font-family: Kanit, sans-serif;
-  font-weight: map.get(var.$weights, "light");
+  font-weight: map.get(var.$weights, "400");
   color: var.$text-color-primary;
 
   @each $name, $color in var.$text-colors {
@@ -18,7 +18,7 @@
 .title {
   font-size: map.get(var.$sizes, "xl");
   font-family: Kanit, sans-serif;
-  font-weight: map.get(var.$weights, "bold");
+  font-weight: map.get(var.$weights, "600");
   color: var.$text-color-primary;
   line-height: 1.1;
 

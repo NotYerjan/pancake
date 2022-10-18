@@ -1,0 +1,134 @@
+@use "../var.scss" as var;
+@use "./fonts.scss";
+@use "sass:map";
+@use "sass:color";
+
+@keyframes img-1 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(5px, 15px);
+  }
+}
+@keyframes img-2 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(10px, 15px);
+  }
+}
+@keyframes img-3 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(10px, 10px);
+  }
+}
+@keyframes img-4 {
+  0% {
+    transform: translate(0px);
+  }
+  100% {
+    transform: translate(10px, 15px);
+  }
+}
+
+.call-for-action {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  .images {
+    display: flex;
+    position: relative;
+    height: 200px;
+    .none {
+      visibility: hidden;
+      width: 100%;
+    }
+    .relative {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      img {
+        right: 0;
+        position: absolute;
+        height: 100%;
+        &.img-1 {
+          animation: img-1 3s ease-in-out 1.2s infinite alternate;
+        }
+        &.img-2 {
+          animation: img-2 3s ease-in-out 0.8s infinite alternate;
+        }
+        &.img-3 {
+          animation: img-3 3s ease-in-out infinite alternate;
+        }
+        &.img-4 {
+          animation: img-4 3s ease-in-out 0.4s infinite alternate;
+        }
+      }
+    }
+  }
+
+  .description {
+    flex: 1;
+
+    h2 {
+      @extend .title;
+      margin-bottom: 24px;
+      font-size: 32px;
+
+      span {
+        @extend .title-primary;
+        font-size: 32px;
+      }
+    }
+    p {
+      @extend .text-secondary;
+      margin-bottom: 24px;
+    }
+    .buttons {
+      display: flex;
+      gap: 16px;
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .call-for-action {
+    align-items: center;
+    flex-direction: row;
+    gap: 64px;
+    .images {
+      flex: 1 1 0;
+      height: auto;
+      .none {
+        max-height: 512px;
+        width: 100%;
+        visibility: hidden;
+      }
+      .relative {
+        height: 100%;
+      }
+    }
+    .description {
+      order: -1;
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "lg")) {
+  .call-for-action {
+    .description {
+      h2 {
+        font-size: 40px;
+        span {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+} ;

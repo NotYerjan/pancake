@@ -22,59 +22,19 @@
 
 .section-1 {
   padding-top: 50px;
-  z-index: -2;
   position: relative;
   margin-bottom: 50px;
-  background: hsla(211, 100%, 50%, 0.08);
+  background: rgba(0, 123, 255, 0.08);
 
   .bg-image {
-    z-index: -2;
+    z-index: 1;
     position: absolute;
     width: 100%;
     bottom: -3px;
   }
-  .sec1SecondSec {
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    padding: 24px;
-
-    .secondFlex1 {
-      order: 1;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .cosmoBunny {
-      position: relative;
-      margin-left: auto;
-      height: 200px;
-      width: 200px;
-      img {
-        max-height: 512px;
-        max-width: 512px;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        &.bunnyImg {
-          animation: bunnyFly ease-in-out 2s infinite alternate;
-        }
-        &.star1 {
-          animation: starBlink ease-in-out 3s infinite alternate;
-        }
-        &.star2 {
-          animation: starBlink ease-in-out 3s infinite alternate;
-          animation-delay: 1s;
-        }
-        &.star3 {
-          animation: starBlink ease-in-out 3s infinite alternate;
-          animation-delay: 2s;
-        }
-      }
-    }
+  * {
+    z-index: 2;
   }
-
   .topBox {
     position: relative;
     z-index: 1;
@@ -145,6 +105,41 @@
       }
     }
   }
+  section {
+    max-width: 1200px;
+    .call-for-action {
+      .images {
+        .relative {
+          img {
+            &.img-1 {
+              animation: bunnyFly 3s ease-in-out 1.2s infinite alternate;
+            }
+            &.img-2 {
+              animation: starBlink 3s ease-in-out 0.8s infinite alternate;
+            }
+            &.img-3 {
+              animation: starBlink 3s ease-in-out infinite alternate;
+            }
+            &.img-4 {
+              animation: starBlink 3s ease-in-out 0.4s infinite alternate;
+            }
+          }
+        }
+      }
+      .description {
+        h2 {
+          span {
+            font-size: 48px;
+          }
+        }
+        p {
+          color: var.$text-color-primary;
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: map.get(var.$screen, "sm")) {
@@ -175,22 +170,6 @@
 @media screen and (min-width: map.get(var.$screen, "md")) {
   .section-1 {
     margin-bottom: 100px;
-    .sec1SecondSec {
-      height: 512px;
-      flex-direction: row;
-      .secondFlex1 {
-        order: 1;
-        flex: 1;
-      }
-      .cosmoBunny {
-        order: 2;
-        max-height: 512px;
-        flex: 1;
-        height: 100%;
-        width: 100%;
-      }
-    }
-
     .topBox {
       height: 220px;
 
@@ -202,6 +181,17 @@
 
         .topBoxContent2 {
           font-size: 30px;
+        }
+      }
+    }
+    section {
+      .call-for-action {
+        .description {
+          h2 {
+            span {
+              font-size: 60px;
+            }
+          }
         }
       }
     }

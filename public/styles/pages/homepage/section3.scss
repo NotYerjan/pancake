@@ -2,38 +2,10 @@
 @use "sass:map";
 @use "sass:color";
 
-@keyframes sec3TopImgEthurmin {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(10px, 15px);
-  }
-}
-
-@keyframes sec3TopImgBitcoin {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(10px, 15px);
-  }
-}
-
-@keyframes sec3TopImgCake {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(10px, 10px);
-  }
-}
-
 .section-3 {
   section {
     display: flex;
     flex-direction: column;
-    padding: 50px 24px;
 
     .sec3TopImses {
       position: relative;
@@ -87,10 +59,6 @@
         #sec3TopImgEthurmin {
           width: 400px;
         }
-      }
-
-      article {
-        width: 50%;
       }
     }
   }
