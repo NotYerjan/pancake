@@ -36,7 +36,11 @@
 }
 
 .section-5 {
-  background: linear-gradient(180deg, #6fb6f1 0%, #eaf2f6 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(18, 133, 226, 0.5) 0%,
+    rgba(18, 133, 226, 0.1) 100%
+  );
   overflow: hidden;
   padding: 80px 24px;
   position: relative;
@@ -100,8 +104,8 @@
   }
 
   .child-section-5 {
-    background-color: rgb(255, 255, 255, 0.6);
-    border: 1px solid #e7e3eb;
+    background-color: var(--bg-color-primary-transparent);
+    border: 1px solid var(--bg-color-secondary); //#e7e3eb
     border-radius: 72px;
     padding: 16px;
     backdrop-filter: blur(12px);

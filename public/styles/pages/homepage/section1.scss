@@ -21,16 +21,23 @@
 }
 
 .section-1 {
-  padding-top: 50px;
   position: relative;
-  margin-bottom: 50px;
-  background: rgba(0, 123, 255, 0.08);
-
+  background: linear-gradient(
+    180deg,
+    rgba(79, 81, 206, 0.2),
+    rgba(118, 69, 217, 0.2)
+  );
   .bg-image {
     z-index: 1;
     position: absolute;
     width: 100%;
     bottom: -3px;
+    .bg-svg {
+      display: var(--light-display);
+    }
+    .bg-svg-dark {
+      display: var(--dark-display);
+    }
   }
   * {
     z-index: 2;
@@ -133,7 +140,7 @@
           }
         }
         p {
-          color: var.$text-color-primary;
+          color: var(--text-color-primary);
           font-weight: 600;
           font-size: 20px;
         }
