@@ -17,6 +17,8 @@
     --dark-display: none;
     --light-display: block;
     --border-color: #e7e3eb;
+    --sun-color: orange;
+    --moon-color: dark;
   }
   .dark {
     --bg-color-primary: #08060b;
@@ -26,6 +28,8 @@
     --dark-display: block;
     --light-display: none;
     --border-color: #08060b;
+    --sun-color: black;
+    --moon-color: #280d5f;
   }
 }
 
