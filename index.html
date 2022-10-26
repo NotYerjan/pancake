@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -674,9 +675,12 @@
         <div class="flex-bottom">
           <div class="tittle">
             <h3 class="title fs-md">
-              Top <span class="title-primary fs-md">Syrup Pools</span>
+              Top
+              <span class="title-primary fs-md" id="stake-title">
+                Syrup Pools
+              </span>
             </h3>
-            <div class="svg">
+            <div class="switch-stake">
               <svg
                 viewBox="0 0 24 25"
                 height="24px"
@@ -691,33 +695,64 @@
               </svg>
             </div>
           </div>
-          <div class="stakes">
-            <div>
-              <p class="title-primary fs-xs fw-600">Stake Cake</p>
-              <p class="text">Up to <span class="fw-600">62.886%</span></p>
-              <p class="grey">APY</p>
+          <article>
+            <div id="pools">
+              <div>
+                <p class="title-primary fs-xs fw-600">Stake Cake</p>
+                <p class="text">Up to <span class="fw-600">62.886%</span></p>
+                <p class="grey">APY</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">
+                  Stake Cake - EARM PSTAKE
+                </p>
+                <p class="text"><span class="fw-600">21.801%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">Stake Cake - EARM CO</p>
+                <p class="text"><span class="fw-600">20.983%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">Stake Cake - EARM HOOP</p>
+                <p class="text"><span class="fw-600">20.925%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">Stake Cake - EARM GQ</p>
+                <p class="text"><span class="fw-600">20.688%</span></p>
+                <p class="grey">APR</p>
+              </div>
             </div>
-            <div class="border-left">
-              <p class="title-primary fs-xs fw-600">Stake Cake - EARM PSTAKE</p>
-              <p class="text"><span class="fw-600">21.801%</span></p>
-              <p class="grey">APR</p>
+            <div id="farms">
+              <div>
+                <p class="title-primary fs-xs fw-600">MHUNT-BNB LP</p>
+                <p class="text">Up to <span class="fw-600">376.656%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">KRS-BUSD LP</p>
+                <p class="text"><span class="fw-600">263.254%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">WMX-BUSD LP</p>
+                <p class="text"><span class="fw-600">254.691%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">TRIVIA-BNB LP</p>
+                <p class="text"><span class="fw-600">218.417%</span></p>
+                <p class="grey">APR</p>
+              </div>
+              <div class="border-left">
+                <p class="title-primary fs-xs fw-600">HOOP-BUSD LP</p>
+                <p class="text"><span class="fw-600">193.941%</span></p>
+                <p class="grey">APR</p>
+              </div>
             </div>
-            <div class="border-left">
-              <p class="title-primary fs-xs fw-600">Stake Cake - EARM CO</p>
-              <p class="text"><span class="fw-600">20.983%</span></p>
-              <p class="grey">APR</p>
-            </div>
-            <div class="border-left">
-              <p class="title-primary fs-xs fw-600">Stake Cake - EARM HOOP</p>
-              <p class="text"><span class="fw-600">20.925%</span></p>
-              <p class="grey">APR</p>
-            </div>
-            <div class="border-left">
-              <p class="title-primary fs-xs fw-600">Stake Cake - EARM GQ</p>
-              <p class="text"><span class="fw-600">20.688%</span></p>
-              <p class="grey">APR</p>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
     </div>
@@ -1328,17 +1363,7 @@
         </div>
       </div>
     </footer>
-
-    <!-- ! Testing components -->
-    <h1 class="title fs-sm fw-200">Hello</h1>
-    <h1 class="title-primary fs-md fw-300">Hello</h1>
-    <h1 class="title-secondary fs-lg fw-500">Hello</h1>
-    <h1 class="title-tertiary fs-xl fw-800">Hello</h1>
-
-    <button class="btn-primary">Hello</button>
-    <button class="btn-small">Hello</button>
-    <button class="btn-outline">Hello</button>
-    <button class="btn-secondary">Hello</button>
-    <script src="./public/javaScript/settingsPopUp.js"></script>
+    <!-- Scripts here -->
+    <script src="./public/javaScript/stakes.js"></script>
   </body>
 </html>
