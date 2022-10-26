@@ -13,6 +13,8 @@
   --dark-display: none;
   --light-display: block;
   --border-color: #e7e3eb;
+  --sun-color: orange;
+  --moon-color: dark;
 }
 :root .dark {
   --bg-color-primary: #08060b;
@@ -22,6 +24,8 @@
   --dark-display: block;
   --light-display: none;
   --border-color: #08060b;
+  --sun-color: black;
+  --moon-color: #280d5f;
 }
 
 body {
@@ -847,7 +851,6 @@ nav .nav-right .lang:hover .lang-list {
   position: relative;
 }
 .passive-income section .flex-bottom article .stakes {
-  order: 1;
   opacity: 0;
   width: 100%;
   display: grid;
@@ -855,7 +858,8 @@ nav .nav-right .lang:hover .lang-list {
   gap: 15px;
   position: absolute;
   z-index: 0;
-  transform: translateY(70px);
+  transform: translateY(30px);
+  transition: all 0.2s linear;
 }
 .passive-income section .flex-bottom article .stakes .title-primary {
   margin-bottom: 5px;
@@ -865,9 +869,9 @@ nav .nav-right .lang:hover .lang-list {
 }
 .passive-income section .flex-bottom article .visible {
   opacity: 1;
-  order: 0;
   z-index: 1;
   transform: translateY(0);
+  transition: all 0.2s linear;
 }
 
 @media screen and (min-width: 576px) {
@@ -1117,13 +1121,13 @@ nav .nav-right .lang:hover .lang-list {
 .nav-popup {
   display: none;
   position: absolute;
-  bottom: 20px;
+  top: 0;
   width: 100%;
-  top: 210px;
-  height: 100vh;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 11;
 }
 .nav-popup .flex-settings {
   display: flex;
@@ -1150,20 +1154,20 @@ nav .nav-right .lang:hover .lang-list {
   width: 2rem;
   border: none;
   background-color: transparent;
-  color: #1FC7D4;
+  color: #1fc7d4;
   cursor: pointer;
 }
 .nav-popup .flex-settings .col-2-exit h2 {
   margin: 2em 2em 1em 2em;
-  color: #422A72;
+  color: #422a72;
 }
 .nav-popup .flex-settings .global {
-  color: #7645D9;
+  color: #7645d9;
   margin-left: 2em;
 }
 .nav-popup .flex-settings span {
   margin-left: 3em;
-  color: #3D256F;
+  color: #3d256f;
 }
 .nav-popup .flex-settings .space {
   width: 90%;
@@ -1182,15 +1186,8 @@ nav .nav-right .lang:hover .lang-list {
   justify-content: space-between;
   border-radius: 20px;
 }
-.nav-popup .flex-settings .checkbox {
-  opacity: 0;
-  position: relative;
-}
-.nav-popup .flex-settings .checkbox:checked + .label .ball {
-  transform: translateX(27px);
-}
 .nav-popup .flex-settings .cBTNLV {
-  fill: #FFB237;
+  fill: #ffb237;
 }
 .nav-popup .flex-settings .eslIYO {
   margin-right: auto;
@@ -1202,7 +1199,7 @@ nav .nav-right .lang:hover .lang-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5em;
+  padding: 0.3em;
   height: 40px;
   width: 75px;
   border-radius: 20px;
@@ -1212,8 +1209,7 @@ nav .nav-right .lang:hover .lang-list {
   display: flex;
   align-items: baseline;
   position: sticky;
-  width: 20px;
-  padding: 0.8em;
+  width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
@@ -1232,7 +1228,7 @@ nav .nav-right .lang:hover .lang-list {
   fill: yellow;
 }
 .nav-popup .brakPB {
-  fill: #9A6AFF;
+  fill: #9a6aff;
 }
 @media screen and (min-width: 852px) {
   .nav-popup .flex-settings {
@@ -1245,7 +1241,7 @@ nav .nav-right .lang:hover .lang-list {
   .nav-popup .col-2-exit {
     border-top-left-radius: 23px;
     border-top-right-radius: 23px;
-    background-color: #EDEFF4;
+    background-color: #edeff4;
   }
 }
 
