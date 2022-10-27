@@ -1,21 +1,25 @@
 import helpers from "./helpers.js";
 
-const open = helpers.qs(".open");
-const navPopup = helpers.qs(".nav-popup");
-const exit = helpers.qs("#exit");
-const changeMode = helpers.qs(".dark-mode");
+const popUpBgDOM = helpers.qs(".nav-popup .bg-transparent");
+const openPopupBtnDOM = helpers.qs(".open");
+const popupDOM = helpers.qs(".nav-popup");
+const exitPopupBtnDOM = helpers.qs("#exit");
+
+const toogleModeBtnDOM = helpers.qsa(".toogler-mode");
+const tooglerCircleDOM = helpers.qsa(".toogler-mode .toogler-circle");
+
 const bodyDOM = helpers.qs("body");
-const changeModeCircle = helpers.qs(".change-mode-circle");
-const switchStake = helpers.qs(".switch-stake");
-const stakeTitle = helpers.qs("#stake-title");
+const switchStakeBtnDOM = helpers.qs(".switch-stake");
+const stakeTitleDOM = helpers.qs("#stake-title");
 
 export default {
-  open,
-  navPopup,
-  exit,
-  changeMode,
+  popUpBgDOM,
+  openPopupBtnDOM,
+  popupDOM,
+  exitPopupBtnDOM,
+  toogleModeBtnDOM,
   bodyDOM,
-  changeModeCircle,
-  switchStake,
-  stakeTitle,
+  tooglerCircleDOM,
+  switchStakeBtnDOM,
+  stakeTitleDOM,
 };

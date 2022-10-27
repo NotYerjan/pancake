@@ -1,38 +1,33 @@
 import store from "./store.js";
-import helpers from "./helpers.js";
 import dom from "./dom.js";
 
 // UPDATE
-const changeBodyMode = async () => {
+const openPopup = async () => {
   let model = await store.get("model");
-  let newModel = { ...model, isDarkMode: !model.isDarkMode };
+  let newModel = { ...model, isSettingsOpen: !model.isSettingsOpen };
   await store.set("model", newModel);
 };
 
 // VIEW
-const openPopUp = (element) => {
-  element.addEventListener("click", () => {
-    dom.navPopup.style.display = "flex";
-  });
-};
-
-const closePopUp = (element) => {
-  element.addEventListener("click", () => {
-    dom.navPopup.style.display = "none";
-  });
-};
-
-const renderBodyMode = async () => {
+const renderSettingsPopup = () => {
   let model = store.get("model");
-  dom.bodyDOM.className = model.isDarkMode ? "dark" : "light";
-  dom.changeModeCircle.style.transform = model.isDarkMode
-    ? "translateX(34px)"
-    : "translateX(0px)";
+  dom.popupDOM.style.display = model.isSettingsOpen ? "block" : "none";
 };
+
 // EVENTS
+const eventPopupSettings = (element) => {
+  element.addEventListener("click", async () => {
+    await openPopup();
+    renderSettingsPopup();
+  });
+};
+
+const eventsListPopupSettings = (list) => {
+  list.map((element) => eventPopupSettings(element));
+};
+
+// EXPORT
 export default {
-  changeBodyMode,
-  openPopUp,
-  closePopUp,
-  renderBodyMode,
+  renderSettingsPopup,
+  eventsListPopupSettings,
 };

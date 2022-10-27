@@ -43,3 +43,48 @@
     }
   }
 }
+.toogler {
+  position: relative;
+  padding: 3px 29px 3px 3px;
+  border-radius: 16px;
+  background-color: rgba(102, 97, 113, 0.5);
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    padding: 0 26px 0 0;
+    .toogler-circle {
+      box-sizing: content-box;
+      border: 3px solid #7645d9;
+    }
+  }
+
+  .toogler-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--bg-color-secondary);
+    transition: transform 0.2s linear;
+  }
+  .label-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 3px 6px;
+
+    .sun {
+      fill: var(--sun-color);
+      transition: all 0.2s linear;
+    }
+    .moon {
+      fill: var(--moon-color);
+      transition: all 0.2s linear;
+    }
+  }
+}

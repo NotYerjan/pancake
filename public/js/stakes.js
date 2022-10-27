@@ -9,16 +9,35 @@ const swapStakes = async () => {
   await store.set("model", newModel);
 };
 
+//INTERVAL
+const startStakesInterval = () =>
+  setInterval(async () => {
+    await swapStakes();
+    await renderStakes();
+  }, 3000);
+
+let stakesId = startStakesInterval();
+
 // VIEW
 const renderStakes = async () => {
+  clearInterval(stakesId);
   let model = await store.get("model");
   let visStake = await helpers.qs(`#${model.topStakes[0]}`);
   let invisStake = await helpers.qs(`#${model.topStakes[1]}`);
   visStake.className = "stakes visible";
   invisStake.className = "stakes";
-  dom.stakeTitle.innerText = visStake.id === "pools" ? "Syrup Pools" : "Farms";
+  dom.stakeTitleDOM.innerText =
+    visStake.id === "pools" ? "Syrup Pools" : "Farms";
+  stakesId = startStakesInterval();
 };
-//INTERVALS
 
-// IMPORT
-export default { swapStakes, renderStakes };
+// EVENT
+const eventStakeSwap = () => {
+  dom.switchStakeBtnDOM.addEventListener("click", async (e) => {
+    await swapStakes();
+    await renderStakes();
+  });
+};
+
+// EXPORT
+export default { eventStakeSwap, renderStakes };
