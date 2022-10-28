@@ -372,6 +372,7 @@
       <section>
         <div class="topBox">
           <div class="topBoxFlex">
+            <!-- top picture one  -->
             <picture>
               <source
                 media="(min-width:750px)"
@@ -387,12 +388,38 @@
                 id="topBoxlotteryImgDex"
               />
             </picture>
-            <article>
+
+            <!-- the second part of it  -->
+            <picture>
+              <source
+                media="(min-width:750px)"
+                srcset="./public/images/img/topBoxperpetual.webp"
+              />
+              <source
+                media="(max-width:749px)"
+                srcset="./public/images/img/topBoxperpetualMobile.webp"
+              />
+              <img
+                src="./public/images/img/topBoxperpetual.webp"
+                alt="Flowers"
+                id="topBoxlotteryImgDex2"
+              />
+            </picture>
+
+            <article id="toBoxMainPage1Uppuer">
               <div class="topBoxContent1">Win $94,321 in Lottorey</div>
               <div class="topBoxContent2">
-                1<small>h</small> 34<small>m</small> 54<small>s</small>
+               <span id="hours">1</span><small>h</small> <span id="minutress">34</span><small>m</small>  <span id="secondss">60</span><small>s</small>
               </div>
               <button class="btn-primary">Play now &rarr;</button>
+            </article> 
+            <!-- the second style of the main box of top  -->
+            <article id="toBoxMainPage2Uppuer">
+              <div class="topBoxContent12">Perpetual Futures</div>
+              <div class="topBoxContent22">
+               UP TO 100<small>x</small> LEVERAGE
+              </div>
+              <button class="btn-primary">Trade now &rarr;</button>
             </article>
           </div>
           <div class="topBoxButtonsSwitchs">
@@ -400,7 +427,7 @@
             <button id="topBoxButtonsSwitch2"></button>
           </div>
         </div>
-        <!-- the second parts' contents have to be added when we add the javaScript codes!!!! -->
+        
       </section>
       <section>
         <article class="call-for-action">
@@ -1313,5 +1340,6 @@
     <button class="btn-small">Hello</button>
     <button class="btn-outline">Hello</button>
     <button class="btn-secondary">Hello</button>
+    <script src="./public/javaScript/suleyman.js"></script>
   </body>
 </html>
