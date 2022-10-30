@@ -608,6 +608,153 @@ nav .nav-right .lang:hover .lang-list {
     display: block;
   }
 }
+.mainContainerForPopUp {
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  z-index: 80;
+}
+.mainContainerForPopUp .allContainerForPopUp {
+  margin: 0 auto;
+  max-width: 800px;
+  max-height: 500px;
+  z-index: 90;
+}
+.mainContainerForPopUp .allContainerForPopUp #mainPopUpFortheMainPage1 {
+  color: #b8add2;
+  background-color: #372f47;
+  border-style: none;
+  padding: 10px;
+  margin: -4px -5px -4px 18px;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.mainContainerForPopUp .allContainerForPopUp #mainPopUpFortheMainPage2 {
+  color: #372f47;
+  background-color: #b8add2;
+  border-style: none;
+  padding: 10px;
+  font-weight: 700;
+  margin: -4px -5px -4px 0px;
+  border-radius: 10px 10px 0px 0px;
+  cursor: pointer;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp {
+  display: flex;
+  display: block;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 {
+  max-width: 500px;
+  background-color: rgb(31, 21, 21);
+  padding: 24px;
+  border-radius: 18px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerTittleFirstPopUpMain {
+  margin: 0px 0px 10px 30px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerMainTextForPopUpMain {
+  margin: 0px 30px 30px 30px;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.555);
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList {
+  margin: 0px -15px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList .allCantainerForMainPopUpAppsLists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList .allCantainerForMainPopUpAppsLists .allCantainerForMainPopUpAppsListsBlocksofTheLists {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList .allCantainerForMainPopUpAppsLists .allCantainerForMainPopUpAppsListsBlocksofTheLists:hover {
+  opacity: 0.5;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList .allCantainerForMainPopUpAppsLists .allCantainerForMainPopUpAppsListsBlocksofTheLists .allCantainerForMainPopUpAppsListsBlocksofTheListsImgsOfiT {
+  height: 50px;
+  width: 50px;
+  margin: 0 auto;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp1 .allCantainerForPopUpMainOfAllappesList .allCantainerForMainPopUpAppsLists .allCantainerForMainPopUpAppsListsBlocksofTheLists .allCantainerForMainPopUpAppsListsTextsOfIt {
+  font-size: 12px;
+  margin: 0 auto;
+  text-align: center;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp .allcanTainerForPopUp2 {
+  display: none;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 {
+  height: 500px;
+  max-width: 300px;
+  background-color: rgb(59, 57, 57);
+  border-radius: 20px;
+  z-index: auto;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide {
+  display: flex;
+  flex-direction: column;
+  padding: 34px;
+  justify-content: center;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideFirsText {
+  text-align: center;
+  color: #9a6aff;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideImgWalletIntro {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideSecondText {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 200;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideButtonsCanger {
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideButtonsCanger #buttonsPopUpMain1 {
+  width: 50px;
+  height: 7px;
+  background-color: #9a6aff;
+  border-style: none;
+  border-radius: 10px 0px 0px 10px;
+  cursor: pointer;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .AllBoxContainerForPopUp2FirstSlideButtonsCanger #buttonsPopUpMain2 {
+  width: 50px;
+  height: 7px;
+  background-color: black;
+  border-style: none;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .secondSildeOfPopUpLastbuton {
+  margin: 20px auto;
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #b8add2;
+  border-radius: 10px;
+  color: black;
+}
+.mainContainerForPopUp .allContainerForPopUp .AllBoxContainerForPopUp2 .AllBoxContainerForPopUp2FirstSlide .secondSildeOfPopUpLastbuton:hover {
+  opacity: 0.6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 @keyframes bunnyFly {
   0% {
     transform: translate(0px);
