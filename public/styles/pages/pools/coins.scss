@@ -1,0 +1,381 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+
+.coins {
+  section {
+    padding: 16px;
+    .filters {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .filter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        .view {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            width: 32px;
+            cursor: pointer;
+            svg {
+              fill: rgba(151, 151, 151, 0.5);
+              &.active {
+                fill: var.$color-secondary;
+              }
+            }
+            &:hover {
+              opacity: 60%;
+            }
+          }
+        }
+        .staked {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+        .continuous {
+          display: flex;
+          border-radius: 16px;
+          height: 32px;
+          background-color: rgba(123, 110, 150, 0.2);
+          div {
+            padding: 0 12px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            font-weight: 600;
+            opacity: 50%;
+            cursor: pointer;
+            &:hover {
+              opacity: 30%;
+            }
+            &.active {
+              opacity: 100%;
+              border-radius: 16px;
+              background-color: rgb(122, 110, 170);
+              color: var(--bg-color-primary);
+              &:hover {
+                opacity: 60%;
+              }
+            }
+          }
+        }
+      }
+      .inputs {
+        display: flex;
+        margin-bottom: 16px;
+        gap: 16px;
+        justify-content: space-between;
+        div {
+          display: flex;
+          flex-direction: column;
+          &.sort {
+            flex: 0 0 136px;
+          }
+          &.search {
+            flex: 0 1 258px;
+          }
+          label {
+            font-size: 12px;
+            font-weight: 600;
+          }
+          input,
+          select,
+          input:focus {
+            width: 100%;
+            padding: 0 16px;
+            border-radius: 16px;
+            height: 40px;
+            border: none;
+            background-color: rgba(123, 110, 150, 0.2);
+            color: var(--text-color-primary);
+          }
+        }
+      }
+    }
+
+    .list-of-coins {
+      padding: 0;
+      border: 1px solid rgba(180, 180, 180, 0.2);
+      border-bottom: 3px solid rgba(180, 180, 180, 0.2);
+      background-color: rgba(180, 180, 180, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      border-radius: 24px;
+      overflow: hidden;
+      li {
+        list-style: none;
+        .main {
+          background: var(--bg-color-secondary);
+          display: flex;
+          gap: 16px;
+          padding: 24px 12px;
+          line-height: 1.1;
+          .coin {
+            flex: 5 1 0%;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            .coin-logo-img {
+              position: relative;
+              height: 40px;
+              width: 40px;
+              .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 36.8px;
+                border-radius: 50%;
+                border: 1px solid #847d91;
+              }
+              .alt-image {
+                position: absolute;
+                height: 20px;
+                border-radius: 50%;
+                border: 1px solid #847d91;
+                bottom: 0;
+                right: 0;
+              }
+            }
+            .name {
+              flex: 1;
+              h4 {
+                font-size: 14px;
+                font-weight: 400;
+              }
+            }
+          }
+          & > div {
+            h6,
+            p {
+              font-size: map.get(var.$sizes, "xs");
+              font-weight: 400;
+              color: var.$text-color-secondary;
+            }
+            h5 {
+              font-size: map.get(var.$sizes, "sm");
+              font-weight: 400;
+            }
+          }
+          .staked,
+          .ends-in {
+            display: none;
+          }
+          .earned {
+            flex: 4.5 1 0%;
+          }
+          .apr {
+            flex: 1 0 50px;
+          }
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1 1 0%;
+            padding: 0;
+            &:hover {
+              text-decoration: none;
+            }
+            img {
+              height: 20px;
+            }
+          }
+        }
+        .details {
+          display: none;
+          background: var(--bg-color-primary-transparent);
+          flex-direction: column;
+          gap: 16px;
+          padding: 12px;
+          line-height: 1.5;
+          border-top: 2px solid rgba(180, 180, 180, 0.2);
+          transition: all 0.2s linear;
+          .boxes {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .earned,
+            .start {
+              padding: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 12px;
+              border: 2px solid var(--border-color);
+              border-radius: 16px;
+              h5 {
+                font-size: 12px;
+              }
+              div {
+                display: flex;
+                align-items: center;
+                p {
+                  font-size: 20px;
+                  font-weight: 600;
+                }
+                button {
+                  cursor: not-allowed;
+                  margin-left: auto;
+                  box-shadow: none;
+                  background-color: rgba(180, 180, 180, 0.2);
+                  opacity: 60%;
+                  color: var(--text-color-primary);
+                }
+              }
+            }
+          }
+
+          .start {
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+          }
+          .total {
+            font-size: 14px;
+            ul {
+              padding: 0;
+              li {
+                display: flex;
+                .tablecontent {
+                  margin-left: auto;
+                }
+              }
+              a {
+                color: var.$color-secondary;
+                margin-left: auto;
+              }
+            }
+            div {
+              margin-top: 4px;
+              display: flex;
+              .manual {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid var.$color-primary;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: var.$color-primary;
+                background-color: var(--bg-color-primary);
+              }
+            }
+          }
+        }
+      }
+    }
+    .image {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      .bunnies {
+        width: 192px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .coins {
+    section {
+      .list-of-coins {
+        li {
+          .main {
+            padding: 24px 32px;
+            .coin {
+              flex: 1 0 110px;
+            }
+            .earned {
+              flex: 1 0 104px;
+            }
+            .apr {
+              flex: 2 0 84px;
+            }
+            button::before {
+              content: "Details";
+            }
+          }
+          .details {
+            .boxes {
+              flex-direction: row;
+              .earned,
+              .start {
+                flex: 1;
+              }
+            }
+            .total {
+              ul {
+                a {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .coins {
+    section {
+      .filters {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .list-of-coins {
+        li {
+          .main {
+            .staked {
+              display: block;
+              flex: 2 0 84px;
+            }
+            button {
+              flex: 0 0 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "lg")) {
+  .coins {
+    section {
+      .list-of-coins {
+        li {
+          .main {
+            .apr {
+              flex: 1 0 104px;
+            }
+            .ends-in {
+              display: block;
+              flex: 2 0 84px;
+            }
+          }
+          .details {
+            flex-direction: row;
+            align-items: center;
+            .boxes {
+              height: fit-content;
+              flex: 2;
+              order: 1;
+            }
+            .total {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

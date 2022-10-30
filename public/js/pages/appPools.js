@@ -1,8 +1,7 @@
-import dom from "./dom.js";
-import store from "./store.js";
-import stakes from "./stakes.js";
-import toogleMode from "./toogleMode.js";
-import settingsPopUp from "./settingsPopUp.js";
+import dom from "../dom.js";
+import store from "../store.js";
+import toogleMode from "../toogleMode.js";
+import settingsPopUp from "../settingsPopUp.js";
 
 //PAGE RENDER
 const renderPage = async () => {
@@ -10,12 +9,10 @@ const renderPage = async () => {
   await store.init();
 
   //VIEW
-  stakes.renderStakes();
   toogleMode.renderBodyMode();
   settingsPopUp.renderSettingsPopup();
 
   //EVENTS
-  stakes.eventStakeSwap();
   toogleMode.eventToogleBodyMode();
   settingsPopUp.eventsListPopupSettings([
     dom.openPopupBtnDOM,
