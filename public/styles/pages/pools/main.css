@@ -608,600 +608,402 @@ nav .nav-right .lang:hover .lang-list {
     display: block;
   }
 }
-@keyframes bunnyFly {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(-5px, -5px);
-  }
+.earn-links {
+  background-color: rgba(180, 180, 180, 0.1);
 }
-@keyframes starBlink {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100%;
-  }
+.earn-links section {
+  padding: 0 12px;
 }
-.section-1 {
-  position: relative;
-  background: linear-gradient(180deg, rgba(79, 81, 206, 0.2), rgba(118, 69, 217, 0.2));
-}
-.section-1 .bg-image {
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  bottom: -3px;
-}
-.section-1 .bg-image .bg-svg {
-  display: var(--light-display);
-}
-.section-1 .bg-image .bg-svg-dark {
-  display: var(--dark-display);
-}
-.section-1 * {
-  z-index: 2;
-}
-.section-1 .topBox {
-  position: relative;
-  z-index: 1;
-  margin: 0 auto;
-  max-width: calc(100% - 20px);
-  max-height: 192px;
-  background: linear-gradient(180deg, #7645d9 0%, #440061 100%);
-  border-radius: 30px;
-  padding: 15px 30px;
-  overflow: hidden;
-}
-.section-1 .topBox .topBoxFlex {
-  position: relative;
-}
-.section-1 .topBox .topBoxFlex article {
-  position: relative;
-  z-index: 1;
-}
-.section-1 .topBox .topBoxFlex article .topBoxContent1 {
-  color: whitesmoke;
-  font-size: 20px;
-  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-}
-.section-1 .topBox .topBoxFlex article .topBoxContent2 {
-  color: rgb(193, 210, 4);
-  font-size: 30px;
-  background-color: rgba(0, 0, 0, 0.221);
-  max-width: 170px;
-  padding: 3px 10px;
-  border-radius: 10px;
-  margin: 10px 0px 20px 0px;
-  box-shadow: 3px 3px 5px #28007e;
-}
-.section-1 .topBox .topBoxFlex picture {
-  position: absolute;
-  bottom: -20;
-  right: -30;
-}
-.section-1 .topBox .topBoxFlex picture #topBoxlotteryImgDex {
-  height: 190px;
-}
-.section-1 .topBox .topBoxFlex picture #topBoxlotteryImgDex2 {
-  height: 190px;
-}
-.section-1 .topBox .topBoxButtonsSwitchs {
+.earn-links section ul {
   display: flex;
-  justify-content: center;
-  padding-top: 0px;
+  padding: 0;
+  gap: 20px;
 }
-.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch1, .section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
-  height: 11px;
-  width: 50px;
-  border-style: none;
-  background-color: whitesmoke;
-  border-radius: 5px 0px 0px 5px;
-  z-index: 100;
+.earn-links section ul li {
+  list-style: none;
 }
-.section-1 .topBox .topBoxButtonsSwitchs #topBoxButtonsSwitch2 {
-  opacity: 0.3;
-  border-radius: 0px 5px 5px 0px;
+.earn-links section ul li a {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  height: 42px;
+  padding: 4px 4px 0;
+  color: var(--text-color-primary);
+  border-bottom: 4px solid rgba(255, 255, 255, 0);
 }
-.section-1 section {
-  max-width: 1200px;
+.earn-links section ul li a.active {
+  border-bottom: 4px solid #1fc7d4;
+  color: #7645d9;
+  font-weight: 600;
 }
-.section-1 section .call-for-action .images .relative img.img-1 {
-  animation: bunnyFly 3s ease-in-out 1.2s infinite alternate;
+
+@media screen and (min-width: 968px) {
+  .earn-links section ul {
+    justify-content: center;
+  }
 }
-.section-1 section .call-for-action .images .relative img.img-2 {
-  animation: starBlink 3s ease-in-out 0.8s infinite alternate;
+.title {
+  background: linear-gradient(139.73deg, rgba(102, 190, 248, 0.25), rgba(195, 148, 253, 0.25));
 }
-.section-1 section .call-for-action .images .relative img.img-3 {
-  animation: starBlink 3s ease-in-out infinite alternate;
+.title section {
+  padding: 32px 24px;
 }
-.section-1 section .call-for-action .images .relative img.img-4 {
-  animation: starBlink 3s ease-in-out 0.4s infinite alternate;
+.title section .call-for-action {
+  padding: 0;
 }
-.section-1 section .call-for-action .description h2 span {
+.title section .call-for-action .description h2 span {
   font-size: 48px;
 }
-.section-1 section .call-for-action .description p {
-  color: var(--text-color-primary);
-  font-weight: 600;
+.title section .call-for-action .description p {
+  margin: 0;
   font-size: 20px;
+  font-weight: 600;
+  color: var(--text-color-primary);
 }
 
-@media screen and (min-width: 576px) {
-  .section-1 .topBox {
-    height: 190px;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent1 {
-    color: whitesmoke;
-    font-size: 20px;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent2 {
-    font-size: 20px;
-    max-width: 170px;
-    padding: 3px 10px;
-    border-radius: 10px;
-    margin: 10px 0px 30px 0px;
-    box-shadow: 3px 3px 5px #28007e;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent12 {
-    font-size: 22px;
-    color: rgba(252, 166, 8, 0.862745098);
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent22 {
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 10px;
+@media screen and (min-width: 968px) {
+  .title section .call-for-action .description h2 span {
+    font-size: 64px;
   }
 }
-@media screen and (min-width: 852px) {
-  .section-1 {
-    margin-bottom: 100px;
-  }
-  .section-1 .topBox {
-    height: 220px;
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent1 {
-    color: whitesmoke;
-    text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-  }
-  .section-1 .topBox .topBoxFlex .topBoxContent2 {
-    font-size: 30px;
-  }
-  .section-1 section .call-for-action .description h2 span {
-    font-size: 60px;
-  }
+.coins section {
+  padding: 16px;
 }
-.section2Main {
-  position: relative;
-  background: none;
+.coins section .filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.section2Main .background {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(118, 69, 217, 0.25));
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% calc(100% - 3vw));
-  width: 100%;
+.coins section .filters .filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.coins section .filters .filter .view {
   height: 100%;
-  position: absolute;
-}
-.section2Main .section2MainCntrol {
-  padding-bottom: 50px;
-}
-.section2Main .section2MainCntrol * {
-  z-index: 1;
-}
-.section2Main .section2MainCntrol .section2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  padding: 24px;
-}
-.section2Main .section2MainCntrol .section2 .section2TopMainImg {
-  width: 48px;
-  height: 48px;
-}
-.section2Main .section2MainCntrol .section2BlockFlex {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  margin-top: 10px;
-}
-.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks {
-  position: relative;
-  width: 280px;
-  height: 170px;
-  box-shadow: 0.2px 3.1px rgba(118, 69, 217, 0.137254902);
-  background-color: var(--bg-color-secondary);
-  border-radius: 24px;
-  padding: 24px;
-}
-.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks .section2Box1Img {
-  width: 36px;
-  height: 36px;
-  position: absolute;
-  top: 24px;
-  right: 24px;
-}
-.section2Main .section2MainCntrol .section2BlockFlex .section2Blocks p {
-  margin-top: 15px;
-}
-
-@media screen and (min-width: 852px) {
-  .section2Main .section2MainCntrol {
-    padding-bottom: 100px;
-  }
-  .section2Main .section2MainCntrol .section2BlockFlex {
-    max-width: 100%;
-    justify-content: center;
-    flex-direction: row;
-    gap: 15px;
-  }
-  .section2Main .section2MainCntrol .section2BlockFlex .section2Blocks {
-    margin: 0;
-    width: 280px;
-    max-width: 32%;
-    height: 280px;
-    padding: 24px;
-  }
-  .section2Main .section2MainCntrol .section2BlockFlex .section2Blocks h3 {
-    margin-top: 110px;
-  }
-}
-.section-3 section {
-  display: flex;
-  flex-direction: column;
-}
-.section-3 section .sec3TopImses {
-  position: relative;
-  margin-left: auto;
-  height: 210px;
-  width: 210px;
-}
-.section-3 section .sec3TopImses #sec3TopImgEthurmin, .section-3 section .sec3TopImses #sec3TopImgCake, .section-3 section .sec3TopImses #sec3TopImgBitcoin {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 210px;
-  animation: sec3TopImgEthurmin ease-in-out 2s infinite alternate;
-  animation-delay: 1s;
-}
-.section-3 section .sec3TopImses #sec3TopImgBitcoin {
-  animation: sec3TopImgBitcoin ease-in-out 2s infinite alternate;
-  animation-delay: 0.5s;
-}
-.section-3 section .sec3TopImses #sec3TopImgCake {
-  animation: sec3TopImgCake ease-in-out 2s infinite alternate;
-}
-.section-3 section article h2 {
-  margin-bottom: 24px;
-  line-height: 1.1;
-}
-.section-3 section article p {
-  margin-bottom: 24px;
-}
-
-@media screen and (min-width: 852px) {
-  .section-3 section {
-    flex-direction: row;
-    align-items: center;
-    gap: 40px;
-  }
-  .section-3 section .sec3TopImses {
-    order: 1;
-    width: 50%;
-    height: 400px;
-  }
-  .section-3 section .sec3TopImses #sec3TopImgEthurmin, .section-3 section .sec3TopImses #sec3TopImgBitcoin, .section-3 section .sec3TopImses #sec3TopImgCake {
-    width: 400px;
-  }
-}
-.passive-income {
-  position: relative;
-  background: none;
-}
-.passive-income .background {
-  background: linear-gradient(0deg, rgba(179, 154, 224, 0.3), rgba(140, 160, 214, 0.3));
-  clip-path: polygon(0% 3vw, 100% 0%, 100% 100%, 0% 100%);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.passive-income section * {
-  z-index: 1;
-}
-.passive-income section .flex-bottom {
-  display: flex;
-  flex-direction: column;
-  padding: 0 24px;
-  width: 100%;
-}
-.passive-income section .flex-bottom .tittle {
-  display: flex;
-  margin-bottom: 15px;
-  gap: 10px;
-}
-.passive-income section .flex-bottom .tittle .switch-stake {
-  fill: #7a6eaa;
   display: flex;
   align-items: center;
+}
+.coins section .filters .filter .view div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
   cursor: pointer;
 }
-.passive-income section .flex-bottom article {
+.coins section .filters .filter .view div svg {
+  fill: rgba(151, 151, 151, 0.5);
+}
+.coins section .filters .filter .view div svg.active {
+  fill: #1fc7d4;
+}
+.coins section .filters .filter .view div:hover {
+  opacity: 60%;
+}
+.coins section .filters .filter .staked {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.coins section .filters .filter .continuous {
+  display: flex;
+  border-radius: 16px;
+  height: 32px;
+  background-color: rgba(123, 110, 150, 0.2);
+}
+.coins section .filters .filter .continuous div {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: 50%;
+  cursor: pointer;
+}
+.coins section .filters .filter .continuous div:hover {
+  opacity: 30%;
+}
+.coins section .filters .filter .continuous div.active {
+  opacity: 100%;
+  border-radius: 16px;
+  background-color: rgb(122, 110, 170);
+  color: var(--bg-color-primary);
+}
+.coins section .filters .filter .continuous div.active:hover {
+  opacity: 60%;
+}
+.coins section .filters .inputs {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+  justify-content: space-between;
+}
+.coins section .filters .inputs div {
+  display: flex;
+  flex-direction: column;
+}
+.coins section .filters .inputs div.sort {
+  flex: 0 0 136px;
+}
+.coins section .filters .inputs div.search {
+  flex: 0 1 258px;
+}
+.coins section .filters .inputs div label {
+  font-size: 12px;
+  font-weight: 600;
+}
+.coins section .filters .inputs div input,
+.coins section .filters .inputs div select,
+.coins section .filters .inputs div input:focus {
   width: 100%;
-  height: 250px;
-  position: relative;
+  padding: 0 16px;
+  border-radius: 16px;
+  height: 40px;
+  border: none;
+  background-color: rgba(123, 110, 150, 0.2);
+  color: var(--text-color-primary);
 }
-.passive-income section .flex-bottom article .stakes {
-  opacity: 0;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  position: absolute;
-  z-index: 0;
-  transform: translateY(30px);
-  transition: all 0.2s linear;
-}
-.passive-income section .flex-bottom article .stakes .title-primary {
-  margin-bottom: 5px;
-}
-.passive-income section .flex-bottom article .stakes .grey {
-  color: grey;
-}
-.passive-income section .flex-bottom article .visible {
-  opacity: 1;
-  z-index: 1;
-  transform: translateY(0);
-  transition: all 0.2s linear;
-}
-
-@media screen and (min-width: 576px) {
-  .passive-income section .flex-bottom article {
-    height: 90px;
-  }
-  .passive-income section .flex-bottom article .stakes {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
-  }
-  .passive-income section .flex-bottom article .stakes .border-left {
-    padding-left: 20px;
-    border-left: 1px #d7caec solid;
-  }
-}
-@media screen and (min-width: 852px) {
-  .passive-income section .call-for-action .description {
-    order: 0;
-  }
-}
-@keyframes img-1 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(3px, 15px);
-  }
-}
-@keyframes img-2 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(5px, 10px);
-  }
-}
-@keyframes img-3 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(6px, 5px);
-  }
-}
-@keyframes img-4 {
-  0% {
-    transform: translate(0px);
-  }
-  100% {
-    transform: translate(4px, 12px);
-  }
-}
-.section-5 {
-  background: linear-gradient(180deg, rgba(18, 133, 226, 0.5) 0%, rgba(18, 133, 226, 0.1) 100%);
+.coins section .list-of-coins {
+  padding: 0;
+  border: 1px solid rgba(180, 180, 180, 0.2);
+  border-bottom: 3px solid rgba(180, 180, 180, 0.2);
+  background-color: rgba(180, 180, 180, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 24px;
   overflow: hidden;
-  padding: 80px 24px;
+}
+.coins section .list-of-coins li {
+  list-style: none;
+}
+.coins section .list-of-coins li .main {
+  background: var(--bg-color-secondary);
+  display: flex;
+  gap: 16px;
+  padding: 24px 12px;
+  line-height: 1.1;
+}
+.coins section .list-of-coins li .main .coin {
+  flex: 5 1 0%;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.coins section .list-of-coins li .main .coin .coin-logo-img {
   position: relative;
+  height: 40px;
+  width: 40px;
 }
-.section-5 .img-left {
-  position: absolute;
-  width: 200px;
-  bottom: -50px;
-  left: 0;
-}
-.section-5 .img-left div {
-  position: relative;
-  width: 100%;
-}
-.section-5 .img-left div img {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: -5px;
-}
-.section-5 .img-left div img.img-left-1 {
-  animation: img-1 3s ease-in-out 1.5s infinite alternate;
-}
-.section-5 .img-left div img.img-left-2 {
-  animation: img-2 3s ease-in-out 1s infinite alternate;
-}
-.section-5 .img-left div img.img-left-3 {
-  animation: img-3 3s ease-in-out 0.5s infinite alternate;
-}
-.section-5 .img-left div img.img-left-4 {
-  animation: img-4 3s ease-in-out infinite alternate;
-}
-.section-5 .img-right {
-  position: absolute;
-  width: 200px;
-  top: -50px;
-  right: 0;
-}
-.section-5 .img-right div {
-  position: relative;
-  width: 100%;
-}
-.section-5 .img-right div img {
-  width: 100%;
+.coins section .list-of-coins li .main .coin .coin-logo-img .logo {
   position: absolute;
   top: 0;
-  right: -5px;
+  left: 0;
+  height: 36.8px;
+  border-radius: 50%;
+  border: 1px solid #847d91;
 }
-.section-5 .img-right div img.img-right-1 {
-  animation: img-1 3s ease-in-out 1.5s infinite alternate;
-}
-.section-5 .img-right div img.img-right-2 {
-  animation: img-2 3s ease-in-out 1s infinite alternate;
-}
-.section-5 .img-right div img.img-right-3 {
-  animation: img-3 3s ease-in-out 0.5s infinite alternate;
-}
-.section-5 .img-right div img.img-right-4 {
-  animation: img-4 3s ease-in-out infinite alternate;
-}
-.section-5 .child-section-5 {
-  background-color: var(--bg-color-primary-transparent);
-  border: 1px solid var(--bg-color-secondary);
-  border-radius: 72px;
-  padding: 16px;
-  backdrop-filter: blur(12px);
-  margin: auto;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  gap: 24px;
-  flex-direction: column;
-}
-.section-5 .child-section-5 .flex-childs {
-  padding-top: 16px;
-  display: flex;
-  gap: 32px;
-  flex-direction: column;
-  max-width: 100%;
-  margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-}
-.section-5 .child-section-5 .flex-childs .card {
-  box-shadow: #ffb237 0px -4px 0px 0px inset;
-  background: linear-gradient(#ffb237 0%, #ffe76a 100%);
-  border: 1px solid #ffb237;
-  border-radius: 24px;
-  width: 275px;
-  max-width: 100%;
-  padding: 24px;
-}
-.section-5 .child-section-5 .flex-childs .card .svg {
-  display: flex;
-  justify-content: flex-end;
-}
-.section-5 .child-section-5 .flex-childs .card .text {
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-  line-height: 1.5;
-  gap: 24px;
-}
-.section-5 .child-section-5 .flex-childs .card .text button {
-  margin-top: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  fill: #fff;
-}
-.section-5 .child-section-5 .flex-childs .card-blue {
-  background: linear-gradient(#7645d9 0%, #5121b1 100%);
-  box-shadow: #3c1786 0px -4px 0px 0px inset;
-  border: 1px solid #3c1786;
-  fill: #fff;
-}
-.section-5 .child-section-5 .flex-childs .card-blue .text-primary {
-  color: #fff;
-}
-.section-5 .child-section-5 .flex-childs .card-blue .fs-lg {
-  color: #ffb237;
-}
-
-@media screen and (min-width: 852px) {
-  .section-5 .img-left,
-.section-5 .img-right {
-    width: 512px;
-  }
-  .section-5 .child-section-5 {
-    padding: 40px;
-  }
-  .section-5 .child-section-5 .flex-childs {
-    flex-direction: row;
-    gap: 24px;
-  }
-  .section-5 .child-section-5 .flex-childs .card {
-    width: 300px;
-    transform: rotate(-1.43deg);
-  }
-  .section-5 .child-section-5 .flex-childs .card-blue {
-    transform: rotate(1.43deg);
-  }
-}
-.section-7 {
-  text-align: center;
-  position: relative;
-  background: linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%);
-}
-.section-7 .bg-image {
+.coins section .list-of-coins li .main .coin .coin-logo-img .alt-image {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #847d91;
+  bottom: 0;
+  right: 0;
+}
+.coins section .list-of-coins li .main .coin .name {
+  flex: 1;
+}
+.coins section .list-of-coins li .main .coin .name h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.coins section .list-of-coins li .main > div h6,
+.coins section .list-of-coins li .main > div p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7a6eaa;
+}
+.coins section .list-of-coins li .main > div h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+.coins section .list-of-coins li .main .staked,
+.coins section .list-of-coins li .main .ends-in {
+  display: none;
+}
+.coins section .list-of-coins li .main .earned {
+  flex: 4.5 1 0%;
+}
+.coins section .list-of-coins li .main .apr {
+  flex: 1 0 50px;
+}
+.coins section .list-of-coins li .main button {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1 1 0%;
+  padding: 0;
+}
+.coins section .list-of-coins li .main button:hover {
+  text-decoration: none;
+}
+.coins section .list-of-coins li .main button img {
+  height: 20px;
+}
+.coins section .list-of-coins li .details {
+  display: none;
+  background: var(--bg-color-primary-transparent);
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  line-height: 1.5;
+  border-top: 2px solid rgba(180, 180, 180, 0.2);
+  transition: all 0.2s linear;
+}
+.coins section .list-of-coins li .details .boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.coins section .list-of-coins li .details .boxes .earned,
+.coins section .list-of-coins li .details .boxes .start {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+}
+.coins section .list-of-coins li .details .boxes .earned h5,
+.coins section .list-of-coins li .details .boxes .start h5 {
+  font-size: 12px;
+}
+.coins section .list-of-coins li .details .boxes .earned div,
+.coins section .list-of-coins li .details .boxes .start div {
+  display: flex;
+  align-items: center;
+}
+.coins section .list-of-coins li .details .boxes .earned div p,
+.coins section .list-of-coins li .details .boxes .start div p {
+  font-size: 20px;
+  font-weight: 600;
+}
+.coins section .list-of-coins li .details .boxes .earned div button,
+.coins section .list-of-coins li .details .boxes .start div button {
+  cursor: not-allowed;
+  margin-left: auto;
+  box-shadow: none;
+  background-color: rgba(180, 180, 180, 0.2);
+  opacity: 60%;
+  color: var(--text-color-primary);
+}
+.coins section .list-of-coins li .details .start {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.coins section .list-of-coins li .details .total {
+  font-size: 14px;
+}
+.coins section .list-of-coins li .details .total ul {
+  padding: 0;
+}
+.coins section .list-of-coins li .details .total ul li {
+  display: flex;
+}
+.coins section .list-of-coins li .details .total ul li .tablecontent {
+  margin-left: auto;
+}
+.coins section .list-of-coins li .details .total ul a {
+  color: #1fc7d4;
+  margin-left: auto;
+}
+.coins section .list-of-coins li .details .total div {
+  margin-top: 4px;
+  display: flex;
+}
+.coins section .list-of-coins li .details .total div .manual {
+  padding: 0 8px;
+  border-radius: 14px;
+  border: 2px solid #7645d9;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  color: #7645d9;
+  background-color: var(--bg-color-primary);
+}
+.coins section .image {
+  margin-top: 12px;
+  display: flex;
   justify-content: center;
 }
-.section-7 .bg-image img {
-  width: 100%;
-  min-width: 968px;
-}
-.section-7 .call-for-action {
-  padding: 64px 24px;
-}
-.section-7 .call-for-action * {
-  z-index: 1;
-}
-.section-7 .call-for-action .description h2 {
-  color: #fff;
-}
-.section-7 .call-for-action .description p {
-  color: #fff;
-}
-.section-7 .call-for-action .description .buttons {
-  display: block;
-}
-.section-7 .call-for-action .description .buttons .btn-secondary {
-  height: auto;
-  margin-bottom: 24px;
+.coins section .image .bunnies {
+  width: 192px;
 }
 
 @media screen and (min-width: 576px) {
-  .section-7 .call-for-action {
-    padding: 80px 24px;
+  .coins section .list-of-coins li .main {
+    padding: 24px 32px;
+  }
+  .coins section .list-of-coins li .main .coin {
+    flex: 1 0 110px;
+  }
+  .coins section .list-of-coins li .main .earned {
+    flex: 1 0 104px;
+  }
+  .coins section .list-of-coins li .main .apr {
+    flex: 2 0 84px;
+  }
+  .coins section .list-of-coins li .main button::before {
+    content: "Details";
+  }
+  .coins section .list-of-coins li .details .boxes {
+    flex-direction: row;
+  }
+  .coins section .list-of-coins li .details .boxes .earned,
+.coins section .list-of-coins li .details .boxes .start {
+    flex: 1;
+  }
+  .coins section .list-of-coins li .details .total ul a {
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 852px) {
+  .coins section .filters {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .coins section .list-of-coins li .main .staked {
+    display: block;
+    flex: 2 0 84px;
+  }
+  .coins section .list-of-coins li .main button {
+    flex: 0 0 80px;
   }
 }
 @media screen and (min-width: 968px) {
-  .section-7 .call-for-action {
-    padding: 96px 24px;
+  .coins section .list-of-coins li .main .apr {
+    flex: 1 0 104px;
+  }
+  .coins section .list-of-coins li .main .ends-in {
+    display: block;
+    flex: 2 0 84px;
+  }
+  .coins section .list-of-coins li .details {
+    flex-direction: row;
+    align-items: center;
+  }
+  .coins section .list-of-coins li .details .boxes {
+    height: fit-content;
+    flex: 2;
+    order: 1;
+  }
+  .coins section .list-of-coins li .details .total {
+    flex: 1;
   }
 }
 .nav-popup {

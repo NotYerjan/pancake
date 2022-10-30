@@ -24,6 +24,8 @@
     }
 
     .flex-bottom {
+      display: flex;
+      flex-direction: column;
       padding: 0 24px;
       width: 100%;
 
@@ -32,24 +34,40 @@
         margin-bottom: 15px;
         gap: 10px;
 
-        .svg {
+        .switch-stake {
           fill: #7a6eaa;
           display: flex;
           align-items: center;
+          cursor: pointer;
         }
       }
-
-      .stakes {
+      article {
         width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        gap: 15px;
+        height: 250px;
+        position: relative;
+        .stakes {
+          opacity: 0;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 15px;
+          position: absolute;
+          z-index: 0;
+          transform: translateY(30px);
+          transition: all 0.2s linear;
 
-        .title-primary {
-          margin-bottom: 5px;
+          .title-primary {
+            margin-bottom: 5px;
+          }
+          .grey {
+            color: grey;
+          }
         }
-        .grey {
-          color: grey;
+        .visible {
+          opacity: 1;
+          z-index: 1;
+          transform: translateY(0);
+          transition: all 0.2s linear;
         }
       }
     }
@@ -60,12 +78,15 @@
   .passive-income {
     section {
       .flex-bottom {
-        .stakes {
-          grid-template-columns: repeat(5, auto);
-          gap: 10px;
-          .border-left {
-            padding-left: 20px;
-            border-left: 1px #d7caec solid;
+        article {
+          height: 90px;
+          .stakes {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            .border-left {
+              padding-left: 20px;
+              border-left: 1px #d7caec solid;
+            }
           }
         }
       }

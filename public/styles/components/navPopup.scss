@@ -1,0 +1,85 @@
+@use "../var.scss" as var;
+@use "sass:map";
+@use "sass:color";
+
+.nav-popup {
+  display: none;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 0;
+  z-index: 5;
+
+  .bg-transparent {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: rgba(87, 51, 160, 0.3);
+    z-index: 6;
+  }
+
+  section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: 0;
+
+    .flex-settings {
+      z-index: 6;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      background-color: var(--bg-color-secondary);
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      padding-bottom: 56px;
+      overflow: hidden;
+
+      .col-2-exit {
+        padding: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(91, 105, 153, 0.1);
+        #exit {
+          height: 20px;
+          color: #1fc7d4;
+          cursor: pointer;
+        }
+      }
+
+      .global {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        .space {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .nav-popup {
+    section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .flex-settings {
+        max-width: 350px;
+        padding: 0;
+        position: relative;
+        border-radius: 24px;
+      }
+    }
+  }
+}

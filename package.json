@@ -4,7 +4,7 @@
   "description": "Every variable are saved in the styles/var.scss file Media queries should be done as in breakpoints variable from smartphone version to desktop {min-width:576px, min-width:852px, min-width:968px} Text and buttons should use the classes as in the index.html ---> Testing components section",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch public/styles/main.scss public/styles/main.css",
+    "dev": "sass --watch public/styles/pages/pools/main.scss:public/styles/pages/pools/main.css public/styles/main.scss:public/styles/main.css ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
