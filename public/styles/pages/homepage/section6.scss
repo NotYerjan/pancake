@@ -1,0 +1,64 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+
+.section-6 {
+  .graphs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .graph {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+      &:first-of-type {
+        .card {
+          border-left: none;
+        }
+      }
+      .card {
+        padding: 0 16px;
+        border-left: 1px rgba(215, 202, 236, 0.5) solid;
+        p {
+          font-size: 16px;
+        }
+        h5 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .section-6 {
+    .graphs {
+      .graph {
+        .card {
+          padding: 0 24px;
+          h5 {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .section-6 {
+    .graphs {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+      .graph:first-of-type,
+      .graph {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        .card {
+          border-left: 1px rgba(215, 202, 236, 0.5) solid;
+          &:first-of-type {
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+}

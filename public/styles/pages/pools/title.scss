@@ -1,0 +1,45 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+
+.title {
+  background: linear-gradient(
+    139.73deg,
+    rgba(102, 190, 248, 0.25),
+    rgba(195, 148, 253, 0.25)
+  );
+  section {
+    padding: 32px 24px;
+    .call-for-action {
+      padding: 0;
+      .description {
+        h2 {
+          span {
+            font-size: 48px;
+          }
+        }
+        p {
+          margin: 0;
+          font-size: 20px;
+          font-weight: 600;
+          color: var(--text-color-primary);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "lg")) {
+  .title {
+    section {
+      .call-for-action {
+        .description {
+          h2 {
+            span {
+              font-size: 64px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

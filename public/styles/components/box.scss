@@ -10,13 +10,15 @@
 
 :root {
   .light {
-    --bg-color-primary: #fff;
+    --bg-color-primary: #faf9fa;
     --bg-color-secondary: #fff; //rgb(255, 255, 255, 0.6)
     --bg-color-primary-transparent: rgb(255, 255, 255, 0.6);
     --text-color-primary: #280d5f;
     --dark-display: none;
     --light-display: block;
     --border-color: #e7e3eb;
+    --sun-color: orange;
+    --moon-color: #fff;
   }
   .dark {
     --bg-color-primary: #08060b;
@@ -26,6 +28,8 @@
     --dark-display: block;
     --light-display: none;
     --border-color: #08060b;
+    --sun-color: #27262c;
+    --moon-color: #7645d9;
   }
 }
 
