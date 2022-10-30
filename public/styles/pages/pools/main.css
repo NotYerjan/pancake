@@ -137,7 +137,7 @@ section {
   background-color: rgb(49, 208, 170);
 }
 .toogler-big.active .toogler-circle {
-  transform: translateX(16px);
+  transform: translateX(26px);
 }
 .toogler-small {
   height: 20px;
@@ -847,12 +847,14 @@ nav .nav-right .lang:hover .lang-list {
   justify-content: flex-end;
   flex: 1 1 0%;
   padding: 0;
+  transition: all 0.2s linear;
 }
 .coins section .list-of-coins li .main button:hover {
   text-decoration: none;
 }
 .coins section .list-of-coins li .main button img {
   height: 20px;
+  transition: all 0.2s linear;
 }
 .coins section .list-of-coins li .details {
   display: none;
@@ -935,6 +937,24 @@ nav .nav-right .lang:hover .lang-list {
   align-items: center;
   color: #7645d9;
   background-color: var(--bg-color-primary);
+  gap: 4px;
+}
+.coins section .list-of-coins li .details .total div .manual svg {
+  fill: #7645d9;
+}
+.coins section .list-of-coins li .details .total div .auto {
+  padding: 0 8px;
+  border-radius: 14px;
+  border: 2px solid #31d0aa;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  color: #31d0aa;
+  background-color: var(--bg-color-primary);
+  gap: 4px;
+}
+.coins section .list-of-coins li .details .total div .auto svg {
+  fill: #31d0aa;
 }
 .coins section .image {
   margin-top: 12px;
@@ -957,6 +977,12 @@ nav .nav-right .lang:hover .lang-list {
   }
   .coins section .list-of-coins li .main .apr {
     flex: 2 0 84px;
+  }
+  .coins section .list-of-coins li .main button.shown::before {
+    content: "Hide";
+  }
+  .coins section .list-of-coins li .main button.shown img {
+    transform: rotate(180deg);
   }
   .coins section .list-of-coins li .main button::before {
     content: "Details";

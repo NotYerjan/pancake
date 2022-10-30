@@ -1,5 +1,6 @@
 const INIT_MODEL = {
   isDarkMode: false,
+  isHealthIndicator: false,
   isSettingsOpen: false,
   ads: {
     number: 1,

@@ -13,6 +13,7 @@ const switchStakeBtnDOM = helpers.qs(".switch-stake");
 const stakeTitleDOM = helpers.qs("#stake-title");
 
 const listOfCoinsDOM = helpers.qs("ul.list-of-coins");
+const tooglerBigDOM = helpers.qs(".toogler-big");
 
 export default {
   popUpBgDOM,
@@ -25,4 +26,5 @@ export default {
   switchStakeBtnDOM,
   stakeTitleDOM,
   listOfCoinsDOM,
+  tooglerBigDOM,
 };

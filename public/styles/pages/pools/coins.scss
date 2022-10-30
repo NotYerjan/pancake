@@ -182,11 +182,13 @@
             justify-content: flex-end;
             flex: 1 1 0%;
             padding: 0;
+            transition: all 0.2s linear;
             &:hover {
               text-decoration: none;
             }
             img {
               height: 20px;
+              transition: all 0.2s linear;
             }
           }
         }
@@ -265,6 +267,24 @@
                 align-items: center;
                 color: var.$color-primary;
                 background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: var.$color-primary;
+                }
+              }
+              .auto {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid #31d0aa;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: #31d0aa;
+                background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: #31d0aa;
+                }
               }
             }
           }
@@ -298,8 +318,18 @@
             .apr {
               flex: 2 0 84px;
             }
-            button::before {
-              content: "Details";
+            button {
+              &.shown {
+                &::before {
+                  content: "Hide";
+                }
+                img {
+                  transform: rotate(180deg);
+                }
+              }
+              &::before {
+                content: "Details";
+              }
             }
           }
           .details {

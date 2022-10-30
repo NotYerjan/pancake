@@ -13,9 +13,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
+    .background {
       width: 100%;
       min-width: 968px;
+    }
+    .cakes {
+      display: none;
+      position: absolute;
+      height: 100%;
+      .left-top,
+      .right-bottom {
+        position: absolute;
+        height: 256px;
+        img {
+          position: absolute;
+          height: 100%;
+          &.img-1 {
+            animation: img-1 1.5s ease-in-out 1s infinite alternate;
+          }
+          &.img-2 {
+            animation: img-2 1.5s ease-in-out 0.5s infinite alternate;
+          }
+          &.img-3 {
+            animation: img-3 1.5s ease-in-out infinite alternate;
+          }
+        }
+      }
+      .left-top {
+        top: 5px;
+        left: -50px;
+        img {
+          left: 0;
+        }
+      }
+      .right-bottom {
+        bottom: 5px;
+        right: -50px;
+        img {
+          right: 0;
+        }
+      }
     }
   }
   .call-for-action {
@@ -44,6 +81,16 @@
   .section-7 {
     .call-for-action {
       padding: 80px 24px; //80 96
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "md")) {
+  .section-7 {
+    .bg-image {
+      .cakes {
+        display: block;
+      }
     }
   }
 }

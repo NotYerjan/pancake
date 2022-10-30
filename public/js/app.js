@@ -3,6 +3,7 @@ import store from "./store.js";
 import stakes from "./stakes.js";
 import toogleMode from "./toogleMode.js";
 import settingsPopUp from "./settingsPopUp.js";
+import healthIndicator from "./healthIndicator.js";
 
 //PAGE RENDER
 const renderPage = async () => {
@@ -12,11 +13,13 @@ const renderPage = async () => {
   //VIEW
   stakes.renderStakes();
   toogleMode.renderBodyMode();
+  healthIndicator.renderHealthIndicator();
   settingsPopUp.renderSettingsPopup();
 
   //EVENTS
   stakes.eventStakeSwap();
   toogleMode.eventToogleBodyMode();
+  healthIndicator.eventHelthIndicator();
   settingsPopUp.eventsListPopupSettings([
     dom.openPopupBtnDOM,
     dom.exitPopupBtnDOM,

@@ -137,7 +137,7 @@ section {
   background-color: rgb(49, 208, 170);
 }
 .toogler-big.active .toogler-circle {
-  transform: translateX(16px);
+  transform: translateX(26px);
 }
 .toogler-small {
   height: 20px;
@@ -1156,6 +1156,56 @@ nav .nav-right .lang:hover .lang-list {
     transform: rotate(1.43deg);
   }
 }
+.section-6 .graphs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-6 .graphs .graph {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+.section-6 .graphs .graph:first-of-type .card {
+  border-left: none;
+}
+.section-6 .graphs .graph .card {
+  padding: 0 16px;
+  border-left: 1px rgba(215, 202, 236, 0.5) solid;
+}
+.section-6 .graphs .graph .card p {
+  font-size: 16px;
+}
+.section-6 .graphs .graph .card h5 {
+  font-size: 20px;
+}
+
+@media screen and (min-width: 576px) {
+  .section-6 .graphs .graph .card {
+    padding: 0 24px;
+  }
+  .section-6 .graphs .graph .card h5 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 852px) {
+  .section-6 .graphs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .section-6 .graphs .graph:first-of-type,
+.section-6 .graphs .graph {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+  }
+  .section-6 .graphs .graph:first-of-type .card,
+.section-6 .graphs .graph .card {
+    border-left: 1px rgba(215, 202, 236, 0.5) solid;
+  }
+  .section-6 .graphs .graph:first-of-type .card:first-of-type,
+.section-6 .graphs .graph .card:first-of-type {
+    border-left: none;
+  }
+}
 .section-7 {
   text-align: center;
   position: relative;
@@ -1170,9 +1220,50 @@ nav .nav-right .lang:hover .lang-list {
   align-items: center;
   justify-content: center;
 }
-.section-7 .bg-image img {
+.section-7 .bg-image .background {
   width: 100%;
   min-width: 968px;
+}
+.section-7 .bg-image .cakes {
+  display: none;
+  position: absolute;
+  height: 100%;
+}
+.section-7 .bg-image .cakes .left-top,
+.section-7 .bg-image .cakes .right-bottom {
+  position: absolute;
+  height: 256px;
+}
+.section-7 .bg-image .cakes .left-top img,
+.section-7 .bg-image .cakes .right-bottom img {
+  position: absolute;
+  height: 100%;
+}
+.section-7 .bg-image .cakes .left-top img.img-1,
+.section-7 .bg-image .cakes .right-bottom img.img-1 {
+  animation: img-1 1.5s ease-in-out 1s infinite alternate;
+}
+.section-7 .bg-image .cakes .left-top img.img-2,
+.section-7 .bg-image .cakes .right-bottom img.img-2 {
+  animation: img-2 1.5s ease-in-out 0.5s infinite alternate;
+}
+.section-7 .bg-image .cakes .left-top img.img-3,
+.section-7 .bg-image .cakes .right-bottom img.img-3 {
+  animation: img-3 1.5s ease-in-out infinite alternate;
+}
+.section-7 .bg-image .cakes .left-top {
+  top: 5px;
+  left: -50px;
+}
+.section-7 .bg-image .cakes .left-top img {
+  left: 0;
+}
+.section-7 .bg-image .cakes .right-bottom {
+  bottom: 5px;
+  right: -50px;
+}
+.section-7 .bg-image .cakes .right-bottom img {
+  right: 0;
 }
 .section-7 .call-for-action {
   padding: 64px 24px;
@@ -1197,6 +1288,11 @@ nav .nav-right .lang:hover .lang-list {
 @media screen and (min-width: 576px) {
   .section-7 .call-for-action {
     padding: 80px 24px;
+  }
+}
+@media screen and (min-width: 852px) {
+  .section-7 .bg-image .cakes {
+    display: block;
   }
 }
 @media screen and (min-width: 968px) {
