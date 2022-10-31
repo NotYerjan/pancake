@@ -10,10 +10,11 @@
 
 :root {
   .light {
-    --bg-color-primary: #faf9fa;
+    --bg-color-primary: #fff;
     --bg-color-secondary: #fff; //rgb(255, 255, 255, 0.6)
     --bg-color-primary-transparent: rgb(255, 255, 255, 0.6);
     --text-color-primary: #280d5f;
+    --text-color-secondary: #27262c;
     --dark-display: none;
     --light-display: block;
     --border-color: #e7e3eb;
@@ -25,6 +26,7 @@
     --bg-color-secondary: #27262c;
     --bg-color-primary-transparent: rgb(8, 6, 11, 0.6);
     --text-color-primary: rgb(244, 238, 255);
+    --text-color-secondary: #b8add2;
     --dark-display: block;
     --light-display: none;
     --border-color: #08060b;

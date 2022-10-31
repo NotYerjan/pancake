@@ -8,7 +8,7 @@
     <title>PancakeSwap | Home</title>
   </head>
   <body class="dark">
-    <div class="nav-popup">
+    <div class="nav-popup settings-popup">
       <div class="bg-transparent"></div>
       <section>
         <div class="flex-settings">
@@ -97,7 +97,115 @@
         </div>
       </section>
     </div>
-
+    <div class="connect-wallet">
+      <div class="bg-transparent"></div>
+      <section>
+        <div class="allContainerForPopUp box">
+          <div class="buttons">
+            <button class="active" id="mainPopUpFortheMainPage1">
+              Connect Wallet
+            </button>
+            <button id="mainPopUpFortheMainPage2">What's a Web3 Wallet?</button>
+          </div>
+          <div class="container active">
+            <div class="connect">
+              <div class="allcanTainerForPopUp1">
+                <div class="description">
+                  <h2>Connect Wallet</h2>
+                  <p>
+                    Start by connecting with one of the wallets below. Be sure
+                    to store your private keys or seed phrase securely. Never
+                    share them with anyone.
+                  </p>
+                </div>
+                <div class="wallet-links">
+                  <div class="link">
+                    <img src="../images/img/metamask.png" alt="metamask" />
+                    <p>Metamask</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/binance.png" alt="Binance Wallet" />
+                    <p>Binance Wallet</p>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="../images/img/coinbase.png"
+                      alt="Coinbase Wallet"
+                    />
+                    <p>Coinbase Wallet</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/trust.png" alt="Trust Wallet" />
+                    <p>Trust Wallet</p>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="../images/img/walletconnect.png"
+                      alt="WalletConnect"
+                    />
+                    <p>Wallet Connect</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/opera.png" alt="Opera Wallet" />
+                    <p>Opera Wallet</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/mathwallet.png" alt="Math Wallet" />
+                    <p>Math Wallet</p>
+                  </div>
+                  <div class="link">
+                    <img
+                      src="../images/img/tokenpocket.png"
+                      alt="TockenPocket"
+                    />
+                    <p>TockenPocket</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/safepal.png" alt="SafePal" />
+                    <p>SafePal</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/coin98.png" alt="Coin98" />
+                    <p>Coin98</p>
+                  </div>
+                  <div class="link">
+                    <img src="../images/img/blocto.png" alt="Blocto" />
+                    <p>Blocto</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- the second part of it   -->
+          <div class="container">
+            <div class="slider">
+              <div class="slide active">
+                <h2>Your first step in the DeFi world</h2>
+                <img src="../images/img/wallet_intro.png" alt="wallet_intro" />
+                <p>
+                  A Web3 Wallet allows you to send and receive crypto assets
+                  like bitcoin, BNB, ETH, NFTs and much more.
+                </p>
+              </div>
+              <div class="slide">
+                <h2>Login using a wallet connection</h2>
+                <img src="../images/img/world_lock.png" alt="wallet_intro" />
+                <p>
+                  Instead of setting up new accounts and passwords for every
+                  website, simply set up your wallet in one go, and connect it
+                  to your favorite DApps.
+                </p>
+              </div>
+              <div class="slider-buttons">
+                <button class="slider-btn active" id="left"></button>
+                <button class="slider-btn" id="right"></button>
+              </div>
+              <button>Learn How to Connect</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <div class="footbar">
       <nav>
         <div class="nav-left">
@@ -439,7 +547,7 @@
         <div class="btn set-btn open">
           <img height="24" src="../images/svg/settings.svg" alt="settings" />
         </div>
-        <button class="btn-small">Connect</button>
+        <button class="btn-small" id="popUpMain">Connect</button>
       </div>
     </nav>
 
@@ -909,6 +1017,7 @@
     </footer>
 
     <!-- Scripts here -->
+    <script src="../javaScript/popUpMain.js"></script>
     <script src="../js/pages/appPools.js" type="module"></script>
   </body>
 </html>

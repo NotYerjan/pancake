@@ -1,8 +1,8 @@
 import helpers from "./helpers.js";
 
-const popUpBgDOM = helpers.qs(".nav-popup .bg-transparent");
+const popUpBgDOM = helpers.qs(".settings-popup .bg-transparent");
 const openPopupBtnDOM = helpers.qs(".open");
-const popupDOM = helpers.qs(".nav-popup");
+const popupDOM = helpers.qs(".settings-popup");
 const exitPopupBtnDOM = helpers.qs("#exit");
 
 const toogleModeBtnDOM = helpers.qsa(".toogler-mode");

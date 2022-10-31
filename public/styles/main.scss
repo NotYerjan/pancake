@@ -1,9 +1,8 @@
 @use "./components/box.scss";
 @use "./components/buttons.scss";
-@use "./components/call-for-action.scss";
 @use "./components/fonts.scss";
 @use "./components/nav.scss";
-@use "./components/mainPopUp.scss";
+@use "./components/call-for-action.scss";
 @use "./pages/homepage/section1.scss";
 @use "./pages/homepage/section2.scss";
 @use "./pages/homepage/section3.scss";
@@ -12,6 +11,7 @@
 @use "./pages/homepage/section6.scss";
 @use "./pages/homepage/section7.scss";
 @use "./components/navPopup.scss";
+@use "./components/mainPopUp.scss";
 @use "./components/footer.scss";
 
 // ! breakpoints:968, 852, 576

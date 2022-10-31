@@ -44,62 +44,79 @@
   }
   .topBox {
     position: relative;
-    z-index: 1;
-    margin: 0 auto;
-    max-width: calc(100% - 20px);
-    max-height: 192px;
-    background: linear-gradient(
-      180deg,
-      var.$color-primary 0%,
-      color.adjust(var.$color-primary, $red: -50, $green: -120, $blue: -120)
-        100%
-    );
-    border-radius: 30px;
-    padding: 15px 30px;
-    overflow: hidden;
+    padding: 0 20px;
 
     .topBoxFlex {
+      z-index: 1;
+      max-width: 100%;
+      height: 192px;
+      background: linear-gradient(#7645d9 0%, #452a7a 100%);
+      border-radius: 30px;
       position: relative;
+
+      padding: 24px;
       article {
+        display: none;
         position: relative;
-        z-index: 1;
-        .topBoxContent1 {
-          color: whitesmoke;
-          font-size: 20px;
-          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
+        height: 100%;
+        &.active {
+          display: block;
         }
+        .content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          height: 100%;
+          z-index: 3;
+          position: relative;
 
-        .topBoxContent2 {
-          color: rgb(193, 210, 4);
-          font-size: 30px;
-          background-color: rgba(0, 0, 0, 0.221);
-          max-width: 170px;
-          padding: 3px 10px;
-          border-radius: 10px;
-          margin: 10px 0px 20px 0px;
-          box-shadow: 3px 3px 5px #28007e;
+          .topBoxContent2 {
+            line-height: 1;
+            width: fit-content;
+            height: fit-content;
+            background: linear-gradient(
+              rgba(37, 23, 66, 0.7) 0%,
+              rgba(69, 42, 122, 0.2) 100%
+            );
+            padding: 4px 8px;
+            border-radius: 12px;
+            border: 2px solid #452a7a;
+            font-size: 32px;
+            font-weight: 600;
+            color: #ffc700;
+          }
+          .topBoxContent12 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffc700;
+          }
+          .topBoxContent22 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+          }
         }
-      }
-      picture {
-        position: absolute;
-        bottom: -20;
-        right: -30;
+        picture {
+          position: absolute;
+          bottom: -32px;
+          right: -24px;
 
-        #topBoxlotteryImgDex {
-          height: 190px;
+          img {
+            max-height: 224px;
+            max-width: 100%;
+          }
         }
-        
-        #topBoxlotteryImgDex2 {
-          height: 190px;
-        }
-        
       }
     }
 
     .topBoxButtonsSwitchs {
+      position: absolute;
       display: flex;
       justify-content: center;
-      padding-top: 0px;
+      left: 0;
+      bottom: 6px;
+      width: 100%;
 
       #topBoxButtonsSwitch1 {
         height: 11px;
@@ -154,60 +171,9 @@
   }
 }
 
-@media screen and (min-width: map.get(var.$screen, "sm")) {
-  .section-1 {
-    .topBox {
-      height: 190px;
-
-      .topBoxFlex {
-        .topBoxContent1 {
-          color: whitesmoke;
-          font-size: 20px;
-          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-        }
-
-        .topBoxContent2 {
-          font-size: 20px;
-          max-width: 170px;
-          padding: 3px 10px;
-          border-radius: 10px;
-          margin: 10px 0px 30px 0px;
-          box-shadow: 3px 3px 5px #28007e;
-        }
-        .topBoxContent12{
-          font-size: 22px;
-          color:#fca608dc;
-          font-weight: 600;
-          margin-bottom: 10px;
-        }
-        .topBoxContent22{
-          font-size: 32px;
-          font-weight: 700;
-          margin-bottom: 10px;
-
-        }
-      }
-    }
-  }
-}
-
 @media screen and (min-width: map.get(var.$screen, "md")) {
   .section-1 {
     margin-bottom: 100px;
-    .topBox {
-      height: 220px;
-
-      .topBoxFlex {
-        .topBoxContent1 {
-          color: whitesmoke;
-          text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.708);
-        }
-
-        .topBoxContent2 {
-          font-size: 30px;
-        }
-      }
-    }
     section {
       .call-for-action {
         .description {
