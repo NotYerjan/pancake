@@ -1370,8 +1370,9 @@ nav .nav-right .lang:hover .lang-list {
   height: 100vh;
   position: absolute;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: var(--text-color-secondary);
   z-index: 7;
+  opacity: 0.5;
 }
 .connect-wallet section {
   margin: 0 auto;
