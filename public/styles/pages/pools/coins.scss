@@ -4,6 +4,7 @@
 .coins {
   section {
     padding: 16px;
+    max-width: 1200px;
     .filters {
       display: flex;
       flex-direction: column;
@@ -27,7 +28,9 @@
             cursor: pointer;
             svg {
               fill: rgba(151, 151, 151, 0.5);
-              &.active {
+            }
+            &.active {
+              svg {
                 fill: var.$color-secondary;
               }
             }
@@ -190,6 +193,11 @@
               height: 20px;
               transition: all 0.2s linear;
             }
+            &.shown {
+              img {
+                transform: rotate(180deg);
+              }
+            }
           }
         }
         .details {
@@ -291,6 +299,206 @@
         }
       }
     }
+    .cards-of-coins {
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+      .coin-item {
+        width: 100%;
+        border: 1px solid rgba(180, 180, 180, 0.3);
+        border-bottom: 3px solid rgba(180, 180, 180, 0.3);
+        border-radius: 24px;
+        overflow: hidden;
+        width: 100%;
+        background-color: var(--bg-color-secondary);
+        .coin {
+          display: flex;
+          background: linear-gradient(
+            180deg,
+            rgba(81, 138, 177, 0.25),
+            rgba(126, 96, 163, 0.25)
+          );
+          padding: 24px;
+          align-items: center;
+          .name {
+            h3 {
+              font-size: 24px;
+            }
+            p {
+              font-size: 14px;
+              color: var.$text-color-secondary;
+            }
+          }
+          .coin-logo-img {
+            position: relative;
+            height: 64px;
+            width: 64px;
+            margin-left: auto;
+            .logo {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 58px;
+              border-radius: 50%;
+              border: 1px solid #847d91;
+            }
+            .alt-image {
+              position: absolute;
+              height: 32px;
+              border-radius: 50%;
+              border: 1px solid #847d91;
+              bottom: 0;
+              right: 0;
+            }
+          }
+        }
+        .start {
+          padding: 24px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h5 {
+            font-size: 12px;
+            color: var.$text-color-secondary;
+          }
+          .apy {
+            padding: 20px;
+            border: 1px solid rgba(180, 180, 180, 0.3);
+            background: var(--bg-color-primary-transparent);
+            border-radius: 16px;
+            div {
+              display: flex;
+              align-items: center;
+              p {
+                margin-left: auto;
+                font-weight: 600;
+              }
+            }
+          }
+          .apr {
+            display: flex;
+            align-items: center;
+            h5 {
+              font-size: 16px;
+              font-weight: 400;
+              color: var(--text-color-primary);
+            }
+            p {
+              margin-left: auto;
+            }
+          }
+          .connect {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+        .details {
+          padding: 24px;
+          border-top: 1px solid rgba(180, 180, 180, 0.3);
+          .main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            div {
+              .manual {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid var.$color-primary;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: var.$color-primary;
+                background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: var.$color-primary;
+                }
+              }
+              .auto {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid #31d0aa;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: #31d0aa;
+                background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: #31d0aa;
+                }
+              }
+            }
+            button {
+              display: flex;
+              align-items: center;
+              flex: 1 1 0%;
+              padding: 0;
+              transition: all 0.2s linear;
+              &:hover {
+                text-decoration: none;
+              }
+              img {
+                height: 20px;
+                transition: all 0.2s linear;
+              }
+            }
+          }
+          .total {
+            font-size: 14px;
+            ul {
+              padding: 0;
+              li {
+                display: flex;
+                .tablecontent {
+                  margin-left: auto;
+                }
+              }
+              a {
+                color: var.$color-secondary;
+                margin-left: auto;
+              }
+            }
+            div {
+              margin-top: 4px;
+              display: flex;
+              .manual {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid var.$color-primary;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: var.$color-primary;
+                background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: var.$color-primary;
+                }
+              }
+              .auto {
+                padding: 0 8px;
+                border-radius: 14px;
+                border: 2px solid #31d0aa;
+                height: 28px;
+                display: flex;
+                align-items: center;
+                color: #31d0aa;
+                background-color: var(--bg-color-primary);
+                gap: 4px;
+                svg {
+                  fill: #31d0aa;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     .image {
       margin-top: 12px;
       display: flex;
@@ -323,9 +531,6 @@
                 &::before {
                   content: "Hide";
                 }
-                img {
-                  transform: rotate(180deg);
-                }
               }
               &::before {
                 content: "Details";
@@ -348,6 +553,11 @@
               }
             }
           }
+        }
+      }
+      .cards-of-coins {
+        .coin-item {
+          width: 348px;
         }
       }
     }

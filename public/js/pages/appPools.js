@@ -8,12 +8,12 @@ import healthIndicator from "../healthIndicator.js";
 //PAGE RENDER
 const renderPage = async () => {
   //LOCAL STORAGE
-  await store.init();
+  const model = await store.init();
 
   //VIEW
   toogleMode.renderBodyMode();
   settingsPopUp.renderSettingsPopup();
-  coinsListRender.renderCoins();
+  coinsListRender.renderCoins(model);
   healthIndicator.renderHealthIndicator();
 
   //EVENTS
@@ -24,6 +24,7 @@ const renderPage = async () => {
     dom.exitPopupBtnDOM,
     dom.popUpBgDOM,
   ]);
+  coinsListRender.eventViewToggle(dom.viewBtnDOM, model);
 };
 
 //START APP

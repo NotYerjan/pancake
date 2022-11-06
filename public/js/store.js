@@ -7,6 +7,7 @@ const INIT_MODEL = {
     amount: 3,
   },
   topStakes: ["pools", "farms"],
+  poolCardView: false,
 };
 
 const set = async (key, item) => {
