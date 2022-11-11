@@ -8,7 +8,7 @@
 :root .light {
   --bg-color-primary: #fff;
   --bg-color-secondary: #fff;
-  --bg-color-primary-transparent: rgb(255, 255, 255, 0.6);
+  --bg-color-primary-transparent: rgba(243, 243, 243, 0.6);
   --text-color-primary: #280d5f;
   --text-color-secondary: #27262c;
   --dark-display: none;
@@ -768,6 +768,13 @@ nav .nav-right .lang:hover .lang-list {
   border: none;
   background-color: rgba(123, 110, 150, 0.2);
   color: var(--text-color-primary);
+  outline: 0;
+}
+.coins section .calc-btn {
+  cursor: pointer;
+}
+.coins section .calc-btn:hover {
+  opacity: 60%;
 }
 .coins section .list-of-coins {
   padding: 0;
@@ -1228,6 +1235,221 @@ nav .nav-right .lang:hover .lang-list {
   }
   .coins section .list-of-coins li .details .total {
     flex: 1;
+  }
+}
+.calculator {
+  height: 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.calculator .bg-transparent {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: var(--text-color-secondary);
+  z-index: 7;
+  opacity: 0.5;
+}
+.calculator section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+.calculator section .roi-calculator {
+  z-index: 7;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-radius: 32px 32px 0 0;
+  overflow: hidden;
+  background-color: var(--bg-color-secondary);
+}
+.calculator section .roi-calculator .head {
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+.calculator section .roi-calculator .head #exit-calc {
+  display: flex;
+  height: 48px;
+  width: 48px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s linear;
+}
+.calculator section .roi-calculator .head #exit-calc:hover {
+  transform: scale(1.2);
+}
+.calculator section .roi-calculator .head #exit-calc svg {
+  color: #1fc7d4;
+}
+.calculator section .roi-calculator .main {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.calculator section .roi-calculator .main h5 {
+  color: #7645d9;
+  font-size: 12px;
+}
+.calculator section .roi-calculator .main .staked .field {
+  border-radius: 16px;
+  background-color: var(--bg-color-primary-transparent);
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 16px;
+  align-items: center;
+}
+.calculator section .roi-calculator .main .staked .field input[type=number]::-webkit-inner-spin-button,
+.calculator section .roi-calculator .main .staked .field input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calculator section .roi-calculator .main .staked .field input[type=number] {
+  -moz-appearance: textfield;
+}
+.calculator section .roi-calculator .main .staked .field .input {
+  text-align: end;
+}
+.calculator section .roi-calculator .main .staked .field .input .usd {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.calculator section .roi-calculator .main .staked .field .input .usd input {
+  background: none;
+  border: none;
+  color: var(--text-color-secondary);
+  font-size: 16px;
+  text-align: end;
+  font-family: Kanit, sans-serif;
+  box-shadow: none;
+  outline: 0;
+}
+.calculator section .roi-calculator .main .staked .field .input .cake {
+  font-size: 12px;
+}
+.calculator section .roi-calculator .main .staked .field .btn-swap {
+  display: flex;
+  fill: var(--text-color-primary);
+  align-items: center;
+  justify-content: end;
+  width: 36px;
+}
+.calculator section .roi-calculator .main .staked .buttons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.calculator section .roi-calculator .main .staked .buttons div {
+  padding: 4px 16px;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 600;
+  background-color: var(--bg-color-primary-transparent);
+  border-radius: 10px;
+  color: #1fc7d4;
+}
+.calculator section .roi-calculator .main .staked-for .time-line {
+  position: relative;
+  background-color: var(--bg-color-primary-transparent);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.calculator section .roi-calculator .main .staked-for .time-line .slider {
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background-color: #1fc7d4;
+  border-radius: 16px;
+  transform: translateX(300%);
+}
+.calculator section .roi-calculator .main .staked-for .time-line .buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.calculator section .roi-calculator .main .staked-for .time-line .buttons div {
+  flex: 1;
+  text-align: center;
+  height: 32px;
+  line-height: 1;
+  padding: 8px 0;
+}
+.calculator section .roi-calculator .main .compounding .checkbox {
+  display: flex;
+  justify-content: space-between;
+}
+.calculator section .roi-calculator .main .compounding .checkbox #compounding {
+  width: 20px;
+  border: none;
+}
+.calculator section .roi-calculator .main .compounding .checkbox .time-line {
+  position: relative;
+  background-color: var(--bg-color-primary-transparent);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  width: 90%;
+}
+.calculator section .roi-calculator .main .compounding .checkbox .time-line .slider {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #1fc7d4;
+  border-radius: 16px;
+  transform: translateX(0%);
+}
+.calculator section .roi-calculator .main .compounding .checkbox .time-line .buttons {
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.calculator section .roi-calculator .main .compounding .checkbox .time-line .buttons div {
+  flex: 1;
+  text-align: center;
+  height: 32px;
+  line-height: 1;
+  padding: 8px 0;
+}
+.calculator section .roi-calculator .main .rates {
+  background: linear-gradient(160deg, rgba(65, 179, 255, 0.25), rgba(160, 83, 255, 0.25));
+  padding: 24px;
+  border-radius: 16px;
+  border: 1px solid rgba(65, 179, 255, 0.25);
+}
+.calculator section .roi-calculator .main .rates h4 {
+  font-size: 24px;
+}
+.calculator section .roi-calculator .main .rates p {
+  font-size: 12px;
+  color: var(--text-color-secondary);
+}
+.calculator section .roi-calculator .details {
+  padding: 24px;
+  background-color: var(--bg-color-primary-transparent);
+  color: #1fc7d4;
+  font-weight: 600;
+  text-align: center;
+}
+
+@media screen and (min-width: 576px) {
+  .calculator section {
+    align-items: center;
+    justify-content: center;
+  }
+  .calculator section .roi-calculator {
+    width: 378px;
+    bottom: auto;
+    border-radius: 32px;
   }
 }
 .connect-wallet {

@@ -1,0 +1,235 @@
+@use "../../var.scss" as var;
+@use "sass:map";
+
+.calculator {
+  height: 0;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+
+  .bg-transparent {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background-color: var(--text-color-secondary);
+    z-index: 7;
+    opacity: 0.5;
+  }
+  section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    .roi-calculator {
+      z-index: 7;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-radius: 32px 32px 0 0;
+      overflow: hidden;
+      background-color: var(--bg-color-secondary);
+      .head {
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--border-color);
+        align-items: center;
+
+        #exit-calc {
+          display: flex;
+          height: 48px;
+          width: 48px;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          transition: transform 0.3s linear;
+          &:hover {
+            transform: scale(1.2);
+          }
+          svg {
+            color: var.$color-secondary;
+          }
+        }
+      }
+      .main {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        h5 {
+          color: var.$color-primary;
+          font-size: 12px;
+        }
+        .staked {
+          .field {
+            border-radius: 16px;
+            background-color: var(--bg-color-primary-transparent);
+            display: flex;
+            justify-content: flex-end;
+            padding: 8px 16px;
+            align-items: center;
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input[type="number"] {
+              -moz-appearance: textfield;
+            }
+            .input {
+              text-align: end;
+              .usd {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                input {
+                  background: none;
+                  border: none;
+                  color: var(--text-color-secondary);
+                  font-size: 16px;
+                  text-align: end;
+                  font-family: Kanit, sans-serif;
+                  box-shadow: none;
+                  outline: 0;
+                }
+              }
+              .cake {
+                font-size: 12px;
+              }
+            }
+            .btn-swap {
+              display: flex;
+              fill: var(--text-color-primary);
+              align-items: center;
+              justify-content: end;
+              width: 36px;
+            }
+          }
+          .buttons {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            div {
+              padding: 4px 16px;
+              line-height: 1;
+              font-size: 12px;
+              font-weight: 600;
+              background-color: var(--bg-color-primary-transparent);
+              border-radius: 10px;
+              color: var.$color-secondary;
+            }
+          }
+        }
+        .staked-for {
+          .time-line {
+            position: relative;
+            background-color: var(--bg-color-primary-transparent);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            .slider {
+              position: absolute;
+              width: 20%;
+              height: 100%;
+              background-color: var.$color-secondary;
+              border-radius: 16px;
+              transform: translateX(300%);
+            }
+            .buttons {
+              position: relative;
+              width: 100%;
+              display: flex;
+
+              div {
+                flex: 1;
+                text-align: center;
+                height: 32px;
+                line-height: 1;
+                padding: 8px 0;
+              }
+            }
+          }
+        }
+        .compounding {
+          .checkbox {
+            display: flex;
+            justify-content: space-between;
+            #compounding {
+              width: 20px;
+              border: none;
+            }
+            .time-line {
+              position: relative;
+              background-color: var(--bg-color-primary-transparent);
+              border: 1px solid var(--border-color);
+              border-radius: 16px;
+              overflow: hidden;
+              width: 90%;
+
+              .slider {
+                position: absolute;
+                width: 25%;
+                height: 100%;
+                background-color: var.$color-secondary;
+                border-radius: 16px;
+                transform: translateX(000%);
+              }
+              .buttons {
+                position: relative;
+                width: 100%;
+                display: flex;
+
+                div {
+                  flex: 1;
+                  text-align: center;
+                  height: 32px;
+                  line-height: 1;
+                  padding: 8px 0;
+                }
+              }
+            }
+          }
+        }
+        .rates {
+          background: linear-gradient(
+            160deg,
+            rgba(65, 179, 255, 0.25),
+            rgba(160, 83, 255, 0.25)
+          );
+          padding: 24px;
+          border-radius: 16px;
+          border: 1px solid rgba(65, 179, 255, 0.25);
+          h4 {
+            font-size: 24px;
+          }
+          p {
+            font-size: 12px;
+            color: var(--text-color-secondary);
+          }
+        }
+      }
+      .details {
+        padding: 24px;
+        background-color: var(--bg-color-primary-transparent);
+        color: var.$color-secondary;
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: map.get(var.$screen, "sm")) {
+  .calculator {
+    section {
+      align-items: center;
+      justify-content: center;
+      .roi-calculator {
+        width: 378px;
+        bottom: auto;
+        border-radius: 32px;
+      }
+    }
+  }
+}

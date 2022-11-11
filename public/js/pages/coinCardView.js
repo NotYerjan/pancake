@@ -21,7 +21,7 @@ const cardView = (coin) =>
   <div class="start">
     <div class="apr">
       <h5>APR:</h5>
-      <p>${coin.apr}%</p>
+      <p class="calc-btn" data-id="${coin.id}">${coin.apr}%</p>
     </div>
     <div class="connect">
       <h5>START EARNING</h5>
@@ -50,7 +50,9 @@ const cardView = (coin) =>
       <ul>
         <li>
           <div class="tablehead">APR:</div>
-          <div class="tablecontent">${coin.apr}%</div>
+          <div class="tablecontent calc-btn" data-id="${coin.id}">${
+    coin.apr
+  }%</div>
         </li>
         <li>
           <div class="tablehead">Total staked:</div>

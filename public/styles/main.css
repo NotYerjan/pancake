@@ -8,7 +8,7 @@
 :root .light {
   --bg-color-primary: #fff;
   --bg-color-secondary: #fff;
-  --bg-color-primary-transparent: rgb(255, 255, 255, 0.6);
+  --bg-color-primary-transparent: rgba(243, 243, 243, 0.6);
   --text-color-primary: #280d5f;
   --text-color-secondary: #27262c;
   --dark-display: none;

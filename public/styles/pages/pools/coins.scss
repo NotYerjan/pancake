@@ -100,11 +100,17 @@
             border: none;
             background-color: rgba(123, 110, 150, 0.2);
             color: var(--text-color-primary);
+            outline: 0;
           }
         }
       }
     }
-
+    .calc-btn {
+      cursor: pointer;
+      &:hover {
+        opacity: 60%;
+      }
+    }
     .list-of-coins {
       padding: 0;
       border: 1px solid rgba(180, 180, 180, 0.2);

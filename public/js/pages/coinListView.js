@@ -30,7 +30,7 @@ const listView = (coin) =>
     </div>
     <div class="apr">
       <h6>APR</h6>
-      <h5>${coin.apr}%</h5>
+      <h5 class="calc-btn" data-id="${coin.id}">${coin.apr}%</h5>
     </div>
     <div class="ends-in">
       <h6>Ends in</h6>
@@ -62,7 +62,9 @@ const listView = (coin) =>
       <ul>
         <li>
           <div class="tablehead">APR:</div>
-          <div class="tablecontent">${coin.apr}</div>
+          <div class="tablecontent calc-btn" data-id="${coin.id}">${
+    coin.apr
+  }</div>
         </li>
         <li>
           <div class="tablehead">Total staked:</div>
